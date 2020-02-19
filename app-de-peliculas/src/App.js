@@ -16,6 +16,7 @@ class App extends Component {
     return (
       <div className="contenedor">
         <Header />
+
         {/* <h1>HOLA</h1>
         <SearchBox getData={this.getData} />
         <MoviesGrid data={this.state.data} /> */}

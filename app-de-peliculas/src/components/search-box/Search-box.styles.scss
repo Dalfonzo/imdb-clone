@@ -4,6 +4,7 @@
   width: 65%;
   background-color: white;
   border-radius: 5px;
+
   .list-options {
     display: flex;
     border-right: 1px solid #c2c2c2;
@@ -11,11 +12,13 @@
     align-items: center;
     justify-content: center;
     width: 7%;
+
     .icon {
       margin-top: -0.3rem;
       margin-left: 0.4rem;
     }
   }
+
   input {
     margin-left: 1rem;
     width: 100%;
@@ -24,6 +27,7 @@
     outline: none;
     border: none;
   }
+
   .magnifier {
     width: 5rem;
     height: 1.7rem;

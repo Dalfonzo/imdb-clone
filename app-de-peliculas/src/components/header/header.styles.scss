@@ -6,4 +6,36 @@
   font-weight: 600;
   background-color: black;
   padding: 1rem;
+  .option {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    align-content: center;
+
+    &:not(:first-child) {
+      padding: 0.6em;
+    }
+
+    &:hover {
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.3);
+      color: white;
+      & > .menu-icon {
+        color: white;
+      }
+    }
+  }
+
+  img {
+    width: 7rem;
+  }
+
+  .menu-icon {
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .bookmark {
+    font-size: 1.6rem;
+  }
 }
