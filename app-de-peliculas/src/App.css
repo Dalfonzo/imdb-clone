@@ -1,0 +1,8 @@
+.contenedor {
+  max-width: 1300px;
+  margin: auto;
+  border: 1px solid red;
+}
+h1 {
+  color: red;
+}
