@@ -6,13 +6,15 @@ import logo from '../../images/IMDB.png';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faBars, faBookmark } from '@fortawesome/free-solid-svg-icons';
 import Menu from '../menu/Menu.component';
+import PopUp from '../pop-up/pop-up.component';
 
 class Header extends React.Component {
   constructor() {
     super();
     this.state = {
       data: [],
-      displayMenu: false
+      displayMenu: false,
+      popUp: false
     };
   }
 
@@ -28,8 +30,14 @@ class Header extends React.Component {
     });
   };
 
+  handlePopUp = () => {
+    this.setState({
+      popUp: !this.state.popUp
+    });
+  };
+
   render() {
-    let { displayMenu } = this.state;
+    let { displayMenu, popUp } = this.state;
     return (
       <>
         <div className="header-contenedor">
@@ -41,8 +49,14 @@ class Header extends React.Component {
             Menu
           </Link>
           <SearchBox getData={this.getData} />
-          <Link to="/" className="option">
+          <Link
+            to="/"
+            className="option"
+            onMouseEnter={this.handlePopUp}
+            onMouseLeave={this.handlePopUp}
+          >
             IMDbPro
+            {popUp ? <PopUp /> : null}
           </Link>
           <Link to="/" className="option">
             <Icon icon={faBookmark} className="menu-icon bookmark" />

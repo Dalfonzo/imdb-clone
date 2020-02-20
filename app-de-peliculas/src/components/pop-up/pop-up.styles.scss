@@ -1,0 +1,55 @@
+.popup-container {
+  padding-top: 1rem;
+  background: url('../../images/bg.png') bottom/cover no-repeat;
+  display: flex;
+  width: 60rem;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  right: 15%;
+  top: 100%;
+
+  .image-container {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 60%;
+      align-self: flex-start;
+      margin-top: 2rem;
+    }
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+
+    p {
+      font-size: 1.6rem;
+      margin: 0 0 1rem 0;
+    }
+
+    ul {
+      li {
+        list-style-type: initial;
+        font-size: 1.2rem;
+        padding: 0.7rem;
+        text-decoration: none;
+      }
+    }
+
+    button {
+      margin: 2rem 0 3rem 0;
+      align-self: flex-start;
+      padding: 0.7rem 2.5rem;
+      background-color: #f5c929;
+      border: none;
+      border-radius: 3px;
+      &:hover {
+        background-color: #deb522;
+      }
+    }
+  }
+}
