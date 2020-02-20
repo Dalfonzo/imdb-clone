@@ -22,29 +22,38 @@ class Header extends React.Component {
     });
   };
 
+  toggleMenu = () => {
+    this.setState({
+      displayMenu: !this.state.displayMenu
+    });
+  };
+
   render() {
+    let { displayMenu } = this.state;
     return (
-      // <div className="header-contenedor">
-      //   <Link to="/" className="option">
-      //     <img src={logo} alt="" />
-      //   </Link>
-      //   <Link to="/" className="option">
-      //     <Icon icon={faBars} className="menu-icon" />
-      //     Menu
-      //   </Link>
-      //   <SearchBox getData={this.getData} />
-      //   <Link to="/" className="option">
-      //     IMDbPro
-      //   </Link>
-      //   <Link to="/" className="option">
-      //     <Icon icon={faBookmark} className="menu-icon bookmark" />
-      //     Watchlist
-      //   </Link>
-      //   <Link to="/" className="option">
-      //     Sign In
-      //   </Link>
-      // </div>
-      <Menu />
+      <>
+        <div className="header-contenedor">
+          <Link to="/" className="option">
+            <img src={logo} alt="" />
+          </Link>
+          <Link to="/" className="option" onClick={this.toggleMenu}>
+            <Icon icon={faBars} className="menu-icon" />
+            Menu
+          </Link>
+          <SearchBox getData={this.getData} />
+          <Link to="/" className="option">
+            IMDbPro
+          </Link>
+          <Link to="/" className="option">
+            <Icon icon={faBookmark} className="menu-icon bookmark" />
+            Watchlist
+          </Link>
+          <Link to="/" className="option">
+            Sign In
+          </Link>
+        </div>
+        <Menu show={displayMenu} toggleMenu={this.toggleMenu} />
+      </>
     );
   }
 }

@@ -6,6 +6,7 @@
     text-decoration: underline;
   }
 }
+
 .title {
   font-size: 2.5rem;
   font-weight: 600;
@@ -15,8 +16,14 @@
     margin-right: 1.5rem;
   }
 }
+
 .icon {
   color: #deb522;
+}
+
+.wrapper {
+  width: 1300px;
+  margin: auto;
 }
 
 .menu-container {
@@ -24,6 +31,10 @@
   color: white;
   min-height: 100vh;
   font-size: 1.5rem;
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  left: 0;
 
   .header {
     display: flex;
@@ -57,4 +68,14 @@
       justify-content: space-between;
     }
   }
+}
+
+.hide {
+  top: -100%;
+  transition: top 0.3s ease-in;
+}
+
+.show {
+  top: 0;
+  transition: top 0.3s ease-in;
 }
