@@ -13,6 +13,13 @@
     justify-content: center;
     width: 7%;
 
+    &:hover {
+      background-color: #f2f2f2;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      cursor: pointer;
+    }
+
     .icon {
       margin-top: -0.3rem;
       margin-left: 0.4rem;
@@ -32,5 +39,9 @@
     width: 5rem;
     height: 1.7rem;
     color: rgba(0, 0, 0, 0.54);
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
