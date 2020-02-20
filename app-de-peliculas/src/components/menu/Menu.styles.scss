@@ -71,11 +71,11 @@
 }
 
 .hide {
-  top: -100%;
-  transition: top 0.3s ease-in;
+  bottom: 100%;
+  transition: all 0.3s ease-in;
 }
 
 .show {
-  top: 0;
-  transition: top 0.3s ease-in;
+  bottom: 0;
+  transition: bottom 0.3s ease-in;
 }

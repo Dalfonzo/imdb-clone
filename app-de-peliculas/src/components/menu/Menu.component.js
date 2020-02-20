@@ -14,7 +14,7 @@ import {
 
 const Menu = ({ show, toggleMenu }) => {
   return (
-    <div className={show ? 'menu-container show' : 'menu-container hide'}>
+    <div className={`menu-container ${show ? 'show' : 'hide'} `}>
       <div className="wrapper">
         <div className="header">
           <img src={logo} alt="" />

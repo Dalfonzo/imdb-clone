@@ -4,6 +4,7 @@
   width: 65%;
   background-color: white;
   border-radius: 5px;
+  border: 2px solid black;
 
   .list-options {
     display: flex;
@@ -23,6 +24,7 @@
     .icon {
       margin-top: -0.3rem;
       margin-left: 0.4rem;
+      color: black;
     }
   }
 
@@ -44,4 +46,8 @@
       cursor: pointer;
     }
   }
+}
+
+.focus {
+  border: 2px solid #deb522;
 }
