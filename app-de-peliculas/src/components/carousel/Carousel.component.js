@@ -25,9 +25,12 @@ class Carousel extends React.Component {
 
   render() {
     const { data } = this.state;
+
     return (
       <div>
         <button onClick={this.getApi}>CLICK ME</button>
+        <button></button>
+        <button></button>
         {data.map(({ id, ...otrasProps }) => (
           <CarouselElement key={id} {...otrasProps} />
         ))}

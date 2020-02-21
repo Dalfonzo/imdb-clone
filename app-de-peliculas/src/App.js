@@ -6,6 +6,9 @@ import Carousel from './components/carousel/Carousel.component';
 
 import './App.css';
 
+//quitar
+import Test2 from './components/test/test2';
+
 class App extends Component {
   constructor() {
     super();
@@ -17,8 +20,9 @@ class App extends Component {
   render() {
     return (
       <div className="contenedor">
-        <Header />
-        <Carousel />
+        {/* <Header />
+        <Carousel /> */}
+        <Test2 />
       </div>
     );
   }

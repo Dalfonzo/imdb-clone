@@ -32,9 +32,5 @@ const CarouselElement = ({ title, overview, poster_path, backdrop_path }) => {
       </div>
     </div>
   );
-
-  // <div className="element-container">
-  //   <img src={poster} alt="" />
-  // </div>
 };
 export default CarouselElement;
