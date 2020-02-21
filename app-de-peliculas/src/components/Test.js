@@ -22,6 +22,7 @@ class Test extends React.Component {
       });
     });
   };
+
   render() {
     const { data } = this.state;
     return (

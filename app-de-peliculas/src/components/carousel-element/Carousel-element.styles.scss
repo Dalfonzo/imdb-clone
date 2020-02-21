@@ -1,0 +1,71 @@
+.element-container {
+  background-color: black;
+  color: white;
+  display: flex;
+  width: 100%;
+  // height: 60vh;
+  height: 50rem;
+  border: 1px solid blue;
+  &:hover {
+    cursor: pointer;
+  }
+
+  .element-poster {
+    width: 26%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .element-backdrop {
+    margin-left: 1rem;
+    width: 74%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .element-backdrop-icon {
+      z-index: 10;
+      font-size: 11rem;
+      margin: 0 2rem 5rem 4rem;
+    }
+    .element-backdrop-text {
+      z-index: 10;
+      margin-bottom: 5rem;
+      .title {
+        font-size: 4rem;
+        font-weight: 400;
+        color: white;
+        padding: 1rem 0;
+      }
+      p {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #a3a3a3;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.6951155462184874) 100%
+      );
+      content: '';
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

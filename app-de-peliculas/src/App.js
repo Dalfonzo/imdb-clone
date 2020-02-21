@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // Componentes
 
 import Header from './components/header/Header.component';
+import Carousel from './components/carousel/Carousel.component';
 
 import './App.css';
 
@@ -17,6 +18,7 @@ class App extends Component {
     return (
       <div className="contenedor">
         <Header />
+        <Carousel />
       </div>
     );
   }
