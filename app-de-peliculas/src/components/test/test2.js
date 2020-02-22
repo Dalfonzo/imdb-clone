@@ -29,14 +29,17 @@ class test2 extends React.Component {
   };
 
   componentDidMount() {
-    console.log('here');
+    setInterval(this.adelante, 4000);
+  }
+
+  componentDidUpdate() {
     if (
-      Math.round(this.state.position) ===
+      Math.round(this.state.position) <
       Math.round(100 / this.state.data.length - 100)
     ) {
-      // setInterval(this.atras, 1000);
-    } else {
-      // setInterval(this.adelante, 1000);
+      this.setState({
+        position: 0
+      });
     }
   }
 

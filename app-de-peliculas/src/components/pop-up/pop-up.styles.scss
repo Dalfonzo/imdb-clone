@@ -9,6 +9,7 @@
   right: 15%;
   top: 100%;
   z-index: 100;
+  padding-right: 1rem;
 
   .image-container {
     width: 30%;
@@ -26,7 +27,6 @@
     flex-direction: column;
     justify-content: center;
     font-weight: 600;
-
     p {
       font-size: 1.6rem;
       margin: 0 0 1rem 0;
