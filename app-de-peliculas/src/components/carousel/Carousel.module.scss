@@ -1,0 +1,14 @@
+.container_1 {
+  position: relative;
+  border: 2px solid red;
+  height: 75vh;
+  overflow: hidden;
+
+  .container_2 {
+    display: flex;
+    position: absolute;
+    transform: translateX(-10px);
+    transition: transform 0.8s ease-in;
+    height: 100%;
+  }
+}

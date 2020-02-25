@@ -6,14 +6,11 @@ import { faSearch, faSortDown } from '@fortawesome/free-solid-svg-icons';
 import SearchMenu from './search-menu/Search-menu';
 
 class SearchBox extends Component {
-  constructor() {
-    super();
-    this.state = {
-      focus: false,
-      displayOptions: false
-    };
-  }
-
+  state = {
+    focus: false,
+    displayOptions: false
+  };
+  
   ApiUrl = 'http://www.omdbapi.com/?&apikey=2fb22d1&s=';
 
   getApi = e => {

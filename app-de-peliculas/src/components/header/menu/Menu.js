@@ -12,7 +12,7 @@ import {
   faGlobeAmericas
 } from '@fortawesome/free-solid-svg-icons';
 
-const Menu = ({ show, toggleMenu }) => {
+const menu = ({ show, toggleMenu }) => {
   return (
     <div
       className={`${classes.container} ${show ? classes.show : classes.hide} `}
@@ -115,4 +115,4 @@ const Menu = ({ show, toggleMenu }) => {
   );
 };
 
-export default Menu;
+export default menu;

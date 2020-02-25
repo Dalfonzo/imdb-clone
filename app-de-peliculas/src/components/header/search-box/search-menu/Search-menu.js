@@ -12,7 +12,7 @@ import {
   faChevronRight
 } from '@fortawesome/free-solid-svg-icons';
 
-const SearchMenu = () => {
+const searchMenu = () => {
   return (
     <div className={classes.container}>
       <li className={classes.option_list}>
@@ -44,4 +44,4 @@ const SearchMenu = () => {
   );
 };
 
-export default SearchMenu;
+export default searchMenu;

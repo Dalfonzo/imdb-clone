@@ -26,7 +26,7 @@ const carouselElement = ({ title, overview, poster_path, backdrop_path }) => {
       >
         <Icon icon={faPlayCircle} className={classes.backdrop_icon} />
         <div className={classes.backdrop_text}>
-          <p className="title">Watch the trailer</p>
+          <p className={classes.title}>Watch the trailer</p>
           <p>'{title}'</p>
         </div>
       </div>

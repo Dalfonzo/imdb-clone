@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './pop-up.module.scss';
 import girl from '../../../images/girl-bg.png';
 
-const PopUp = () => {
+const popUp = () => {
   return (
     <div className={classes.container}>
       <div className={classes.image_container}>
@@ -22,4 +22,4 @@ const PopUp = () => {
   );
 };
 
-export default PopUp;
+export default popUp;
