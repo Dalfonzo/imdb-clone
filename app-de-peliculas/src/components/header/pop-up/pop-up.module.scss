@@ -1,6 +1,6 @@
-.popup-container {
+.container {
   padding-top: 1rem;
-  background: url('../../images/bg.png') bottom/cover no-repeat;
+  background: url('../../../images/bg.png') bottom/cover no-repeat;
   display: flex;
   width: 60rem;
   color: white;
@@ -11,7 +11,7 @@
   z-index: 100;
   padding-right: 1rem;
 
-  .image-container {
+  .image_container {
     width: 30%;
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@
     }
   }
 
-  .text-container {
+  .text_container {
     display: flex;
     flex-direction: column;
     justify-content: center;

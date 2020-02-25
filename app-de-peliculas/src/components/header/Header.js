@@ -1,22 +1,19 @@
 import React from 'react';
-import './Header.styles.scss';
-import SearchBox from '../search-box/Search-box.component';
+import classes from './Header.module.scss';
+import SearchBox from './search-box/Search-box';
 import { Link } from 'react-router-dom';
 import logo from '../../images/IMDB.png';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faBars, faBookmark } from '@fortawesome/free-solid-svg-icons';
-import Menu from '../menu/Menu.component';
-import PopUp from '../pop-up/pop-up.component';
+import Menu from './menu/Menu';
+import PopUp from './pop-up/pop-up';
 
 class Header extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      data: [],
-      displayMenu: false,
-      popUp: false
-    };
-  }
+  state = {
+    data: [],
+    displayMenu: false,
+    popUp: false
+  };
 
   getData = data => {
     this.setState({
@@ -40,29 +37,29 @@ class Header extends React.Component {
     let { displayMenu, popUp } = this.state;
     return (
       <>
-        <div className="header-contenedor">
-          <Link to="/" className="option">
+        <div className={classes.container}>
+          <Link to="/" className={classes.option}>
             <img src={logo} alt="" />
           </Link>
-          <Link to="/" className="option" onClick={this.toggleMenu}>
-            <Icon icon={faBars} className="menu-icon" />
+          <Link to="/" className={classes.option} onClick={this.toggleMenu}>
+            <Icon icon={faBars} className={classes.menu_icon} />
             Menu
           </Link>
           <SearchBox getData={this.getData} />
           <Link
             to="/"
-            className="option"
+            className={classes.option}
             onMouseEnter={this.handlePopUp}
             onMouseLeave={this.handlePopUp}
           >
             IMDbPro
             {popUp ? <PopUp /> : null}
           </Link>
-          <Link to="/" className="option">
+          <Link to="/" className={classes.option}>
             <Icon icon={faBookmark} className="menu-icon bookmark" />
             Watchlist
           </Link>
-          <Link to="/" className="option">
+          <Link to="/" className={classes.option}>
             Sign In
           </Link>
         </div>

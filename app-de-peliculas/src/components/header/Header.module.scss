@@ -1,4 +1,4 @@
-.header-contenedor {
+.container {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -22,7 +22,7 @@
       border-radius: 5px;
       background-color: rgba(255, 255, 255, 0.3);
       color: white;
-      & > .menu-icon {
+      & > .menu_icon {
         color: white;
       }
     }
@@ -32,7 +32,7 @@
     width: 7rem;
   }
 
-  .menu-icon {
+  .menu_icon {
     margin-right: 1rem;
     font-size: 2rem;
     color: rgba(255, 255, 255, 0.6);

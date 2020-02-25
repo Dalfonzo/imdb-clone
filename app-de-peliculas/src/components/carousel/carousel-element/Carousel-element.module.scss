@@ -1,4 +1,4 @@
-.element-container {
+.container {
   background-color: black;
   color: white;
   display: flex;
@@ -10,7 +10,7 @@
     cursor: pointer;
   }
 
-  .element-poster {
+  .poster {
     width: 26%;
     overflow: hidden;
     background-repeat: no-repeat;
@@ -19,7 +19,7 @@
     }
   }
 
-  .element-backdrop {
+  .backdrop {
     margin-left: 1rem;
     width: 74%;
     overflow: hidden;
@@ -32,14 +32,15 @@
       opacity: 0.8;
     }
 
-    .element-backdrop-icon {
+    .backdrop_icon {
       z-index: 10;
       font-size: 11rem;
       margin: 0 2rem 5rem 4rem;
     }
-    .element-backdrop-text {
+    .backdrop_text {
       z-index: 10;
       margin-bottom: 5rem;
+
       .title {
         font-size: 4rem;
         font-weight: 400;

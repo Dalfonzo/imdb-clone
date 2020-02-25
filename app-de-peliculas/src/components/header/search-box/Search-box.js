@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './Search-box.styles.scss';
+import classes from './Search-box.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faSortDown } from '@fortawesome/free-solid-svg-icons';
-import SearchMenu from '../search-menu/Search-menu.component';
+import SearchMenu from './search-menu/Search-menu';
 
 class SearchBox extends Component {
   constructor() {
@@ -41,9 +41,9 @@ class SearchBox extends Component {
   render() {
     const { focus, displayOptions } = this.state;
     return (
-      <div className={`search-contenedor ${focus ? 'focus' : ''}`}>
-        <div className="list-options" onClick={this.clickHandler}>
-          All <FontAwesomeIcon icon={faSortDown} className="icon" />
+      <div className={`${classes.container} ${focus ? classes.focus : ''}`}>
+        <div className={classes.list_options} onClick={this.clickHandler}>
+          All <FontAwesomeIcon icon={faSortDown} className={classes.icon} />
         </div>
         {displayOptions ? <SearchMenu /> : null}
 
@@ -55,7 +55,7 @@ class SearchBox extends Component {
           onBlur={this.focusHandler}
         />
 
-        <FontAwesomeIcon icon={faSearch} className="magnifier" />
+        <FontAwesomeIcon icon={faSearch} className={classes.magnifier} />
       </div>
     );
   }

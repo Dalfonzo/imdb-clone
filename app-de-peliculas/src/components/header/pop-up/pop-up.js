@@ -1,14 +1,14 @@
 import React from 'react';
-import './pop-up.styles.scss';
-import girl from '../../images/girl-bg.png';
+import classes from './pop-up.module.scss';
+import girl from '../../../images/girl-bg.png';
 
 const PopUp = () => {
   return (
-    <div className="popup-container">
-      <div className="image-container">
+    <div className={classes.container}>
+      <div className={classes.image_container}>
         <img src={girl} alt="" />
       </div>
-      <div className="text-container">
+      <div className={classes.text_container}>
         <p>The essential resource for entertainment professionals</p>
         <ul>
           <li>Find industry contacts & talent representation</li>

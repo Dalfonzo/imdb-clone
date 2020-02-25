@@ -1,14 +1,14 @@
 import React from 'react';
-import './Carousel-element.styles.scss';
+import classes from './Carousel-element.module.scss';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
-const CarouselElement = ({ title, overview, poster_path, backdrop_path }) => {
+const carouselElement = ({ title, overview, poster_path, backdrop_path }) => {
   const url = 'https://image.tmdb.org/t/p/';
   return (
-    <div className="element-container">
+    <div className={classes.container}>
       <div
-        className="element-poster"
+        className={classes.poster}
         style={{
           background: `url(${url +
             'w500' +
@@ -17,15 +17,15 @@ const CarouselElement = ({ title, overview, poster_path, backdrop_path }) => {
       ></div>
 
       <div
-        className="element-backdrop"
+        className={classes.backdrop}
         style={{
           background: `url(${url +
             'w1280' +
             backdrop_path}) center/cover no-repeat`
         }}
       >
-        <Icon icon={faPlayCircle} className="element-backdrop-icon" />
-        <div className="element-backdrop-text">
+        <Icon icon={faPlayCircle} className={classes.backdrop_icon} />
+        <div className={classes.backdrop_text}>
           <p className="title">Watch the trailer</p>
           <p>'{title}'</p>
         </div>
@@ -33,4 +33,4 @@ const CarouselElement = ({ title, overview, poster_path, backdrop_path }) => {
     </div>
   );
 };
-export default CarouselElement;
+export default carouselElement;

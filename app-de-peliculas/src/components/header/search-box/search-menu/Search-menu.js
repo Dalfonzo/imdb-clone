@@ -1,5 +1,5 @@
 import React from 'react';
-import './Search-menu.styles.scss';
+import classes from './Search-menu.module.scss';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import {
   faSearch,
@@ -14,28 +14,28 @@ import {
 
 const SearchMenu = () => {
   return (
-    <div className="search-menu-container">
-      <li className="option-list">
-        <ul className="option">
+    <div className={classes.container}>
+      <li className={classes.option_list}>
+        <ul className={classes.option}>
           <Icon icon={faSearch}></Icon>
           All
         </ul>
-        <ul className="option">
+        <ul className={classes.option}>
           <Icon icon={faFilm}></Icon>Titles
         </ul>
-        <ul className="option">
+        <ul className={classes.option}>
           <Icon icon={faTv}></Icon>TV Episodes
         </ul>
-        <ul className="option">
+        <ul className={classes.option}>
           <Icon icon={faUserFriends}></Icon>Celebs
         </ul>
-        <ul className="option">
+        <ul className={classes.option}>
           <Icon icon={faBuilding}></Icon>Companies
         </ul>
-        <ul className="option">
+        <ul className={classes.option}>
           <Icon icon={faChevronCircleRight}></Icon>Keywords
         </ul>
-        <ul className="option">
+        <ul className={classes.option}>
           <Icon icon={faSearchPlus}></Icon>Advanced Search
           <Icon icon={faChevronRight}></Icon>
         </ul>

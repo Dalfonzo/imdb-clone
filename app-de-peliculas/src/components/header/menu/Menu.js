@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../../images/IMDB.png';
-import './Menu.styles.scss';
+import logo from '../../../images/IMDB.png';
+import classes from './Menu.module.scss';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import {
   faTimesCircle,
@@ -14,19 +14,25 @@ import {
 
 const Menu = ({ show, toggleMenu }) => {
   return (
-    <div className={`menu-container ${show ? 'show' : 'hide'} `}>
-      <div className="wrapper">
-        <div className="header">
+    <div
+      className={`${classes.container} ${show ? classes.show : classes.hide} `}
+    >
+      <div className={classes.wrapper}>
+        <div className={classes.header}>
           <img src={logo} alt="" />
-          <Icon icon={faTimesCircle} className="icon" onClick={toggleMenu} />
+          <Icon
+            icon={faTimesCircle}
+            className={classes.icon}
+            onClick={toggleMenu}
+          />
         </div>
-        <div className="list-container">
-          <div className="row1">
-            <p className="title">
-              <Icon icon={faFilm} className="icon" />
+        <div className={classes.list_container}>
+          <div className={classes.row1}>
+            <p className={classes.title}>
+              <Icon icon={faFilm} className={classes.icon} />
               Movies
             </p>
-            <ul className="list">
+            <ul className={classes.list}>
               <li>Showtimes & Tickets</li>
               <li>Top Rated Movies</li>
               <li>Most Popular Movies</li>
@@ -39,23 +45,23 @@ const Menu = ({ show, toggleMenu }) => {
               <li>Movie News</li>
               <li>India Movie Spotlight</li>
             </ul>
-            <p className="title">
-              <Icon icon={faUserFriends} className="icon" />
+            <p className={classes.title}>
+              <Icon icon={faUserFriends} className={classes.icon} />
               Celebs
             </p>
-            <ul className="list">
+            <ul className={classes.list}>
               <li>Born Today</li>
               <li>Most Popular Celebs</li>
               <li>Celebrity News</li>
             </ul>
           </div>
-          <div className="row2">
+          <div className={classes.row2}>
             <div>
-              <p className="title">
-                <Icon icon={faTv} className="icon" />
+              <p className={classes.title}>
+                <Icon icon={faTv} className={classes.icon} />
                 TV Shows
               </p>
-              <ul className="list">
+              <ul className={classes.list}>
                 <li>Top Rated Shows</li>
                 <li>Most Popular Shows</li>
                 <li>Browse TV Shows by Genre</li>
@@ -64,23 +70,23 @@ const Menu = ({ show, toggleMenu }) => {
               </ul>
             </div>
             <div>
-              <p className="title">
-                <Icon icon={faPlay} className="icon" />
+              <p className={classes.title}>
+                <Icon icon={faPlay} className={classes.icon} />
                 Videos
               </p>
-              <ul className="list">
+              <ul className={classes.list}>
                 <li>IMDb Originals</li>
                 <li>Latest Trailers</li>
               </ul>
             </div>
           </div>
 
-          <div className="row3">
-            <p className="title">
-              <Icon icon={faStar} className="icon" />
+          <div className={classes.row3}>
+            <p className={classes.title}>
+              <Icon icon={faStar} className={classes.icon} />
               Awards & Events
             </p>
-            <ul className="list">
+            <ul className={classes.list}>
               <li>Oscars</li>
               <li>Best Picture Winners</li>
               <li>Golden Globes</li>
@@ -93,11 +99,11 @@ const Menu = ({ show, toggleMenu }) => {
               <li>Festival Central</li>
               <li>All Events</li>
             </ul>
-            <p className="title">
-              <Icon icon={faGlobeAmericas} className="icon" />
+            <p className={classes.title}>
+              <Icon icon={faGlobeAmericas} className={classes.icon} />
               Community
             </p>
-            <ul className="list">
+            <ul className={classes.list}>
               <li>Help Center</li>
               <li>Contributor Zone</li>
               <li>Polls</li>

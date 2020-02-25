@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 // Componentes
 
-import Header from './components/header/Header.component';
-import Carousel from './components/carousel/Carousel.component';
+import Header from './components/header/Header';
+import Carousel from './components/carousel/Carousel';
 
 import './App.css';
 
@@ -20,9 +20,9 @@ class App extends Component {
   render() {
     return (
       <div className="contenedor">
-        {/* <Header />
-        <Carousel /> */}
-        <Test2 />
+        <Header />
+        <Carousel />
+        {/* <Test2 /> */}
       </div>
     );
   }

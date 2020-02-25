@@ -1,17 +1,15 @@
 import React from 'react';
-import './Carousel.styles.scss';
+import classes from './Carousel.module.scss';
 import axios from 'axios';
-import CarouselElement from '../carousel-element/Carousel-element.component';
+import CarouselElement from './carousel-element/Carousel-element';
 // 3e2cc31e8a094dc74d7fa8c446b0c3fa
 // https://image.tmdb.org/t/p/w500
 // https://www.youtube.com/watch?v
+
 class Carousel extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      data: []
-    };
-  }
+  state = {
+    data: []
+  };
 
   getApi = () => {
     const url =
