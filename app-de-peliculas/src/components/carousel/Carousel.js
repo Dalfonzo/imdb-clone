@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './Carousel.module.scss';
 import axios from 'axios';
 import CarouselElement from './carousel-element/Carousel-element';
+import Controls from './carousel-controls/Controls';
 // 3e2cc31e8a094dc74d7fa8c446b0c3fa
 // https://image.tmdb.org/t/p/w500
 // https://www.youtube.com/watch?v
@@ -67,12 +68,14 @@ class Carousel extends React.Component {
               <CarouselElement key={id} {...otrasProps} />
             ))}
           </div>
+          <Controls
+            disableBack={Math.round(position) === 0}
+            disableForward={Math.round(position) === Math.round(final)}
+            back={this.atras}
+            forward={this.adelante}
+          />
         </div>
-
-        <button
-          onClick={this.atras}
-          disabled={Math.round(position) === 0}
-        >
+        {/* <button onClick={this.atras} disabled={Math.round(position) === 0}>
           Atras
         </button>
         <button
@@ -80,7 +83,7 @@ class Carousel extends React.Component {
           disabled={Math.round(position) === Math.round(final)}
         >
           Adelante
-        </button>
+        </button> */}
       </>
     );
   }

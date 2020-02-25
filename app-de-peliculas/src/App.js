@@ -7,7 +7,6 @@ import Carousel from './components/carousel/Carousel';
 import './App.css';
 
 //quitar
-import Test2 from './components/test/test2';
 
 class App extends Component {
   constructor() {
@@ -22,7 +21,6 @@ class App extends Component {
       <div className="contenedor">
         <Header />
         <Carousel />
-        {/* <Test2 /> */}
       </div>
     );
   }
