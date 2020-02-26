@@ -11,9 +11,8 @@ class Slider extends React.Component {
   };
 
   getMovies = () => {
-    const url =
-      'https://api.themoviedb.org/3/movie/popular?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&page=1';
-    axios(url).then(({ data }) => {
+    // const url =this.props.url;
+    axios(this.props.url).then(({ data }) => {
       this.setState({
         data: data.results
       });
@@ -42,13 +41,11 @@ class Slider extends React.Component {
     const disableForward = Math.abs(position / 100 ) === Math.floor(data.length / 6)
     const disableBack = !position
 
-    console.log(disableForward)
     return (
-      <>
         <div className={classes.wrapper}>
-          <h2 className={classes.title}>What to Watch</h2>
-          <h3 className={classes.subtitle}>Fan Favorites</h3>
-          <p className={classes.description}>This week's top TV and movies</p>
+          <h2 className={classes.title}>{this.props.title}</h2>
+          <h3 className={classes.subtitle}>{this.props.subtitle}</h3>
+          <p className={classes.description}>{this.props.description}</p>
           <div className={classes.container1}>
             <div className={classes.container2} style={translateSlider}>
               {data.map(movie => {
@@ -63,7 +60,6 @@ class Slider extends React.Component {
             />
           </div>
         </div>
-      </>
     );
   }
 }

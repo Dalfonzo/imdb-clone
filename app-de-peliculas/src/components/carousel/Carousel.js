@@ -7,6 +7,9 @@ import Controls from './carousel-controls/Controls';
 // https://image.tmdb.org/t/p/w500
 // https://www.youtube.com/watch?v
 
+// pagina de news key
+// c89fb28b98ed4170a4004bab8835654b
+
 class Carousel extends React.Component {
   state = {
     data: [],
