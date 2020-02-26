@@ -1,0 +1,54 @@
+.container {
+  font-size: 1.5rem;
+  padding: 3rem 0;
+  color: white;
+
+  .icons_wrapper {
+    text-align: center;
+    padding: 2rem 0;
+
+    .icon {
+      padding: 1rem;
+      font-size: 2.5rem;
+      box-sizing: unset;
+      border-radius: 50px;
+      margin: 0.3rem;
+      &:hover {
+        background-color: rgb(41, 41, 41);
+        cursor: pointer;
+      }
+    }
+  }
+  .links_wrapper {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    padding: 1rem 0;
+
+    p {
+      padding: 1rem;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .icon {
+        margin-left: 0.3rem;
+      }
+    }
+  }
+  .branding {
+    text-align: center;
+    padding: 2rem 0;
+    .icon {
+      margin: 0 0.5rem;
+    }
+  }
+  .copyright {
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(160, 160, 160);
+  }
+}

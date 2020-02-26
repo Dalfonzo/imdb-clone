@@ -82,6 +82,7 @@ class Carousel extends React.Component {
             handler={this.adelante}
           />
         </div>
+        <p className={classes.sugestion}>Browse trailers</p>
       </>
     );
   }
