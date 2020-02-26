@@ -7,6 +7,7 @@ import Slider from './components/movies-slider/Slider';
 import News from './components/news-slider/News';
 
 import './App.css';
+import Celebrities from './components/celebrities-slider/Celebrities';
 
 class App extends Component {
   state = {
@@ -40,6 +41,11 @@ class App extends Component {
           title="More to explore"
           subtitle="Top news"
           url="http://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=c89fb28b98ed4170a4004bab8835654b"
+        />
+        <Celebrities
+          subtitle="Celebrities"
+          description="Trending celebrities"
+          url="https://api.themoviedb.org/3/person/popular?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&page=1"
         />
       </div>
     );

@@ -11,7 +11,6 @@ const card = ({ data }) => {
             background: `url(${data.urlToImage}) center/cover no-repeat`
           }}
         >
-          {console.log(data.urlToImage)}
         </div>
         <p className={classes.description}>{data.title}</p>
       </div>

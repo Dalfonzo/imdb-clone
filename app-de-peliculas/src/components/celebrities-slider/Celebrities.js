@@ -1,25 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
-import Card from './news-card/newsCard';
-import classes from './News.module.scss';
+import Celebrity from './celebrity-card/Celebrity';
+import classes from './Celebrities.module.scss';
 import Controls from '../carousel/carousel-controls/Controls';
 
-class News extends React.Component {
+export class Celebrities extends Component {
   state = {
     data: [],
     position: 0
   };
 
-  getNews = () => {
+  getCelebs = () => {
     axios(this.props.url).then(({ data }) => {
+      console.log(data.results);
       this.setState({
-        data: data.articles
+        data: data.results
       });
     });
   };
 
   componentDidMount() {
-    this.getNews();
+    this.getCelebs();
   }
 
   adelante = () => {
@@ -38,17 +39,18 @@ class News extends React.Component {
     const { data, position } = this.state;
     const translateSlider = { transform: `translateX(${position}%)` };
     const disableForward =
-      Math.abs(position / 100) === Math.floor(data.length / 3);
+      Math.abs(position / 100) === Math.floor(data.length / 6);
     const disableBack = !position;
-    
+
     return (
       <div className={classes.wrapper}>
-        <h2 className={classes.title}>{this.props.title}</h2>
         <h3 className={classes.subtitle}>{this.props.subtitle}</h3>
+        <p className={classes.description}>{this.props.description}</p>
+
         <div className={classes.container1}>
           <div className={classes.container2} style={translateSlider}>
-            {data.map(n => (
-              <Card data={n} />
+            {data.map(c => (
+              <Celebrity data={c} />
             ))}
           </div>
           <Controls
@@ -66,4 +68,5 @@ class News extends React.Component {
     );
   }
 }
-export default News;
+
+export default Celebrities;
