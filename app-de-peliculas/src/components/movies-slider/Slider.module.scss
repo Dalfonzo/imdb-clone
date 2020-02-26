@@ -40,6 +40,9 @@
     height: 40rem;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     .container2 {
       width: 100%;

@@ -2,6 +2,9 @@
   position: relative;
   height: 75vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   .container_2 {
     display: flex;

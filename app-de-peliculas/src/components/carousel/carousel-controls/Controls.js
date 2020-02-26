@@ -6,28 +6,15 @@ import {
   faChevronLeft
 } from '@fortawesome/free-solid-svg-icons';
 
-const controls = ({ disableBack, back, forward, disableForward }) => {
-  
-  const hideBackButton = disableBack ? { visibility: 'hidden' } : null;
-  const hideForwardButton = disableForward ? { visibility: 'hidden' } : null;
+const controls = ({ direction, disableButton, handler }) => {
+  const hideButton = disableButton ? { visibility: 'hidden' } : null;
+  const i = direction === 'forward' ? faChevronRight : faChevronLeft;
 
   return (
-    <div className={classes.wrapper}>
-      <div 
-        className={classes.container} 
-        onClick={back} 
-        style={hideBackButton}
-      >
-        <Icon icon={faChevronLeft} className={classes.icon} />
-      </div>
-      <div
-        className={classes.container}
-        onClick={forward}
-        style={hideForwardButton}
-      >
-        <Icon icon={faChevronRight} className={classes.icon} />
-      </div>
+    <div className={classes.container} onClick={handler} style={hideButton}>
+      <Icon icon={i} className={classes.icon} />
     </div>
+
   );
 };
 

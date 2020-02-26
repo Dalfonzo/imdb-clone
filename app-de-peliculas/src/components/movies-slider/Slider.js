@@ -38,28 +38,33 @@ class Slider extends React.Component {
   render() {
     const { data, position } = this.state;
     const translateSlider = { transform: `translateX(${position}%)` };
-    const disableForward = Math.abs(position / 100 ) === Math.floor(data.length / 6)
-    const disableBack = !position
+    const disableForward =
+      Math.abs(position / 100) === Math.floor(data.length / 6);
+    const disableBack = !position;
 
     return (
-        <div className={classes.wrapper}>
-          <h2 className={classes.title}>{this.props.title}</h2>
-          <h3 className={classes.subtitle}>{this.props.subtitle}</h3>
-          <p className={classes.description}>{this.props.description}</p>
-          <div className={classes.container1}>
-            <div className={classes.container2} style={translateSlider}>
-              {data.map(movie => {
-                return <Card movie={movie} />;
-              })}
-            </div>
-            <Controls
-              disableBack={disableBack}
-              disableForward={disableForward}
-              back={this.atras}
-              forward={this.adelante}
-            />
+      <div className={classes.wrapper}>
+        <h2 className={classes.title}>{this.props.title}</h2>
+        <h3 className={classes.subtitle}>{this.props.subtitle}</h3>
+        <p className={classes.description}>{this.props.description}</p>
+        <div className={classes.container1}>
+          <div className={classes.container2} style={translateSlider}>
+            {data.map(movie => {
+              return <Card movie={movie} />;
+            })}
           </div>
+          <Controls
+            direction="back"
+            disableButton={disableBack}
+            handler={this.atras}
+          />
+          <Controls
+            direction="forward"
+            disableButton={disableForward}
+            handler={this.adelante}
+          />
         </div>
+      </div>
     );
   }
 }

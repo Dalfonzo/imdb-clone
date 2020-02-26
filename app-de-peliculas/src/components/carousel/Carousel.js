@@ -72,10 +72,14 @@ class Carousel extends React.Component {
             ))}
           </div>
           <Controls
-            disableBack={Math.round(position) === 0}
-            disableForward={Math.round(position) === Math.round(final)}
-            back={this.atras}
-            forward={this.adelante}
+            direction="back"
+            disableButton={Math.round(position) === 0}
+            handler={this.atras}
+          />
+          <Controls
+            direction="forward"
+            disableButton={Math.round(position) === Math.round(final)}
+            handler={this.adelante}
           />
         </div>
       </>
