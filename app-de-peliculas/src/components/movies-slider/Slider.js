@@ -11,7 +11,6 @@ class Slider extends React.Component {
   };
 
   getMovies = () => {
-    // const url =this.props.url;
     axios(this.props.url).then(({ data }) => {
       this.setState({
         data: data.results

@@ -3,6 +3,37 @@
   color: white;
   display: flex;
   width: 130rem;
+  position: relative;
+  overflow: hidden;
+
+  .foo {
+      position: absolute;
+      top: -0.3rem;
+      left: 0.2rem;
+      width: min-content;
+      opacity: 0.9;
+      z-index: 10;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+
+      .bookmark {
+        font-size: 6rem;
+        opacity: 0.8;
+        color: black;
+      }
+
+      .plus {
+        position: absolute;
+        font-size: 2rem;
+        font-weight: 400;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
 
   &:hover {
     cursor: pointer;
