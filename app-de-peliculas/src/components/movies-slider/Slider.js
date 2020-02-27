@@ -48,8 +48,8 @@ class Slider extends React.Component {
         <p className={classes.description}>{this.props.description}</p>
         <div className={classes.container1}>
           <div className={classes.container2} style={translateSlider}>
-            {data.map(movie => {
-              return <Card movie={movie} />;
+            {data.map(({id, ...otras}) => {
+              return <Card key={id} {...otras} />;
             })}
           </div>
           <Controls

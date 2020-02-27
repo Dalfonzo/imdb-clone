@@ -48,8 +48,8 @@ export class Celebrities extends Component {
 
         <div className={classes.container1}>
           <div className={classes.container2} style={translateSlider}>
-            {data.map(({id, ...c}) => (
-              <Celebrity key={id} {...c} />
+            {data.map(({ id, ...otrasProps }) => (
+              <Celebrity key={id} {...otrasProps} />
             ))}
           </div>
           <Controls
