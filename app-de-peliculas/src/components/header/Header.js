@@ -35,11 +35,10 @@ class Header extends React.Component {
 
   showScrolls = visible => {
     let element = document.querySelector('body');
-    {
-      visible
-        ? (element.style.overflow = 'hidden')
-        : (element.style.overflow = 'auto');
-    }
+
+    visible
+      ? (element.style.overflow = 'hidden')
+      : (element.style.overflow = 'auto');
   };
 
   render() {
