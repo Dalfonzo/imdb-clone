@@ -1,0 +1,169 @@
+.title {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+
+span {
+  color: #136cb2;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.wrapper {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    185deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(231, 230, 230, 1) 0%,
+    rgba(255, 253, 253, 0.6951155462184874) 100%
+  );
+  .container {
+    max-width: 100rem;
+    margin: auto;
+    background-color: white;
+    display: flex;
+
+    .links {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .option {
+        display: flex;
+        color: rgb(75, 75, 75);
+        padding: 1rem 3rem;
+        border: 1px solid rgb(228, 228, 228);
+        border-radius: 5px;
+        width: 50%;
+        margin: 0.5rem 0;
+        font-size: 1.6rem;
+        font-weight: 600;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        .icon {
+          height: 2rem;
+          width: 2rem;
+          background-size: 2rem;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-right: 1rem;
+        }
+        .google {
+          background-image: url('../../icons/hangouts-de-google.png');
+        }
+        .amazon {
+          background-image: url('../../icons/amazonas.png');
+        }
+        .facebook {
+          background-image: url('../../icons/facebook.png');
+        }
+        .imdb {
+          background-image: url('../../images/IMDB.png');
+        }
+      }
+      button {
+        margin: 1rem;
+        font-size: 1.7rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        padding: 0.8rem 2.5rem;
+        border-radius: 5px;
+        background-color: #e4b721;
+        border: none;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .separator {
+        font-size: 1.4rem;
+        margin: 1rem 0;
+        position: relative;
+        &::after {
+          content: '';
+          width: 7.5rem;
+          height: 1px;
+
+          position: absolute;
+          top: 50%;
+          left: 150%;
+          border: 0.5px solid black;
+        }
+        &::before {
+          content: '';
+          width: 7rem;
+          height: 1px;
+          transform-origin: 100% 100%;
+          position: absolute;
+          top: 50%;
+          right: 150%;
+          border: 0.5px solid black;
+        }
+      }
+      .disclaimer {
+        margin: 1.5rem 0 3rem 0;
+        font-size: 1rem;
+        width: 50%;
+        letter-spacing: 0.1rem;
+        line-height: 1.8rem;
+        text-align: center;
+      }
+    }
+    .Benefits {
+      font-size: 1.5rem;
+      position: relative;
+      flex: 1;
+
+      .subtitle {
+        font-weight: 600;
+        margin: 0.5rem 0;
+      }
+
+      .text {
+        width: 80%;
+        line-height: 1.5;
+      }
+
+      &::after {
+        content: '';
+        width: 1px;
+        height: 70%;
+        position: absolute;
+        top: 5%;
+        left: -10%;
+        border: 0.5px solid rgb(228, 228, 228);
+      }
+    }
+  }
+
+  .history {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 100rem;
+    background-color: rgb(228, 228, 228);
+    padding-bottom: 8rem;
+    p {
+      margin: 0;
+      padding-top: 2rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      align-self: flex-start;
+      color: rgb(88, 88, 88);
+      &:nth-child(2) {
+        color: #136cb2;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

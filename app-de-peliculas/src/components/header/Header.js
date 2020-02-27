@@ -47,7 +47,7 @@ class Header extends React.Component {
     let { displayMenu, popUp } = this.state;
     this.showScrolls(displayMenu);
     return (
-      <>
+      <div className={classes.wrapper}>
         <div className={classes.container}>
           <Link to="/" className={classes.option}>
             <img src={logo} alt="" />
@@ -70,12 +70,12 @@ class Header extends React.Component {
             <Icon icon={faBookmark} className={classes.menu_icon} />
             Watchlist
           </Link>
-          <Link to="/" className={classes.option}>
+          <Link to="/signin" className={classes.option}>
             Sign In
           </Link>
         </div>
         <Menu show={displayMenu} toggleMenu={this.toggleMenu} />
-      </>
+      </div>
     );
   }
 }
