@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Celebrity.module.scss';
 
-const Celebrity = ({ data }) => {
+const Celebrity = ({ name, profile_path }) => {
   const baseUrl = 'https://image.tmdb.org/t/p/w185';
   return (
     <div className={classes.wrapper}>
@@ -9,11 +9,10 @@ const Celebrity = ({ data }) => {
         <div
           className={classes.image}
           style={{
-            background: `url(${baseUrl +
-              data.profile_path}) center/cover no-repeat`
+            background: `url(${baseUrl + profile_path}) center/cover no-repeat`
           }}
         ></div>
-        <p className={classes.name}>{data.name}</p>
+        <p className={classes.name}>{name}</p>
       </div>
     </div>
   );

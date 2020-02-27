@@ -12,7 +12,6 @@ export class Celebrities extends Component {
 
   getCelebs = () => {
     axios(this.props.url).then(({ data }) => {
-      console.log(data.results);
       this.setState({
         data: data.results
       });
@@ -49,8 +48,8 @@ export class Celebrities extends Component {
 
         <div className={classes.container1}>
           <div className={classes.container2} style={translateSlider}>
-            {data.map(c => (
-              <Celebrity data={c} />
+            {data.map(({id, ...c}) => (
+              <Celebrity key={id} {...c} />
             ))}
           </div>
           <Controls
