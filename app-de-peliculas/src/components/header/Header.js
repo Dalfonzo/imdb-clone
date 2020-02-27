@@ -58,7 +58,7 @@ class Header extends React.Component {
           </Link>
           <SearchBox getData={this.getData} />
           <Link
-            to="/"
+            to="/imdbpro"
             className={classes.option}
             onMouseEnter={this.handlePopUp}
             onMouseLeave={this.handlePopUp}
