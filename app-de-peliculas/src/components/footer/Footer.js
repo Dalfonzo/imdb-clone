@@ -8,9 +8,7 @@ import {
   faTwitch,
   faTwitter,
   faYoutube,
-  faAmazon,
-  faCcAmazonPay,
-  faAmazonPay
+  faAmazon
 } from '@fortawesome/free-brands-svg-icons';
 
 const footer = () => {
@@ -56,7 +54,7 @@ const footer = () => {
         </p>
       </div>
       <p className={classes.branding}>
-        an <Icon icon={faAmazon} className={classes.icon} /> 
+        an <Icon icon={faAmazon} className={classes.icon} />
         company
       </p>
       <p className={classes.copyright}>© 1990-2020 by IMDb.com, Inc.</p>

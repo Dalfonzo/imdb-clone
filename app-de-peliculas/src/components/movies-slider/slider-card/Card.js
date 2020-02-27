@@ -8,9 +8,10 @@ const card = ({ movie }) => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
-        <Icon icon={faBookmark} className={classes.bookmark} />
-        <Icon icon={faPlus} className={classes.plus} />
-
+        <div className={classes.foo}>
+          <Icon icon={faBookmark} className={classes.bookmark} />
+          <Icon icon={faPlus} className={classes.plus} />
+        </div>
         <img src={baseUrl + movie.poster_path} alt="" />
         <p className={classes.vote}>
           <Icon icon={faStar} className={classes.icon} />

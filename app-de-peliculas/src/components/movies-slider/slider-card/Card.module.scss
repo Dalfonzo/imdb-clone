@@ -8,31 +8,42 @@
     position: relative;
     width: min-content;
 
-    .bookmark {
+    .foo {
       position: absolute;
-      font-size: 4rem;
-      color: black;
-      opacity: 0.8;
-      margin-left: 0.2rem;
-      &:hover {
-        cursor: pointer;
-        color: rgb(53, 53, 53);
-      }
-    }
+      top: -0.1rem;
+      left: 0.2rem;
+      width: min-content;
+      opacity: 0.9;
+      z-index: 10;
 
-    .plus {
-      position: absolute;
-      font-size: 1.5rem;
-      font-weight: 400;
-      top: 0.8rem;
-      left: 1rem;
       &:hover {
         cursor: pointer;
+        opacity: 0.7;
+      }
+
+      .bookmark {
+        font-size: 4rem;
+        opacity: 0.8;
+        color: black;
+      }
+
+      .plus {
+        position: absolute;
+        font-size: 1.5rem;
+        font-weight: 400;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
 
     img {
       margin-bottom: 1rem;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        z-index: 1;
+      }
     }
 
     p {
