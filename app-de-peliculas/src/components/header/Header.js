@@ -56,7 +56,7 @@ class Header extends React.Component {
             {popUp ? <PopUp /> : null}
           </Link>
           <Link to="/" className={classes.option}>
-            <Icon icon={faBookmark} className="menu-icon bookmark" />
+            <Icon icon={faBookmark} className={classes.menu_icon}/>
             Watchlist
           </Link>
           <Link to="/" className={classes.option}>
