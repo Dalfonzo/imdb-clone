@@ -47,8 +47,8 @@ class News extends React.Component {
         <h3 className={classes.subtitle}>{this.props.subtitle}</h3>
         <div className={classes.container1}>
           <div className={classes.container2} style={translateSlider}>
-            {data.map(n => (
-              <Card data={n} />
+            {data.map(({url, ...otras}) => (
+              <Card key={url} {...otras} />
             ))}
           </div>
           <Controls
