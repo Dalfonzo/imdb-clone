@@ -1,12 +1,14 @@
 import React from 'react';
-import classes from './Header.module.scss';
-import SearchBox from './search-box/Search-box';
 import { Link } from 'react-router-dom';
-import logo from '../../images/IMDB.png';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import { faBars, faBookmark } from '@fortawesome/free-solid-svg-icons';
+
+import SearchBox from './search-box/Search-box';
 import Menu from './menu/Menu';
 import PopUp from './pop-up/pop-up';
+import logo from '../../images/IMDB.png';
+import { faBars, faBookmark } from '@fortawesome/free-solid-svg-icons';
+
+import classes from './Header.module.scss';
 
 class Header extends React.Component {
   state = {

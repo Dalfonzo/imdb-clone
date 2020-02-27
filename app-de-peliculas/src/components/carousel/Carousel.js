@@ -1,8 +1,11 @@
 import React from 'react';
-import classes from './Carousel.module.scss';
 import axios from 'axios';
+
 import CarouselElement from './carousel-element/Carousel-element';
 import Controls from './carousel-controls/Controls';
+
+import classes from './Carousel.module.scss';
+
 // 3e2cc31e8a094dc74d7fa8c446b0c3fa
 // https://image.tmdb.org/t/p/w500
 // https://www.youtube.com/watch?v

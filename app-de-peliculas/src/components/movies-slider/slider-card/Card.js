@@ -1,7 +1,9 @@
 import React from 'react';
-import classes from './Card.module.scss';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+
 import { faStar, faPlus, faBookmark } from '@fortawesome/free-solid-svg-icons';
+
+import classes from './Card.module.scss';
 
 const card = ({ poster_path, vote_average, title }) => {
   const baseUrl = 'https://image.tmdb.org/t/p/w185';

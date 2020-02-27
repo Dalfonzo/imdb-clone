@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import classes from './Search-box.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { faSearch, faSortDown } from '@fortawesome/free-solid-svg-icons';
 import SearchMenu from './search-menu/Search-menu';
+
+import classes from './Search-box.module.scss';
 
 class SearchBox extends Component {
   state = {
     focus: false,
     displayOptions: false
   };
-  
+
   ApiUrl = 'http://www.omdbapi.com/?&apikey=2fb22d1&s=';
 
   getApi = e => {

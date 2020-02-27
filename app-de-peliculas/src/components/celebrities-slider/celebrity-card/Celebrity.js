@@ -1,7 +1,8 @@
 import React from 'react';
+
 import classes from './Celebrity.module.scss';
 
-const Celebrity = ({ name, profile_path }) => {
+const celebrity = ({ name, profile_path }) => {
   const baseUrl = 'https://image.tmdb.org/t/p/w185';
   return (
     <div className={classes.wrapper}>
@@ -18,4 +19,4 @@ const Celebrity = ({ name, profile_path }) => {
   );
 };
 
-export default Celebrity;
+export default celebrity;

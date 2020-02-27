@@ -1,4 +1,5 @@
 import React from 'react';
+
 import classes from './newsCard.module.scss';
 
 const card = ({ urlToImage, title }) => {

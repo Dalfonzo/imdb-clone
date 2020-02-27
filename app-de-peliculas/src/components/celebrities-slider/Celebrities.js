@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+
 import Celebrity from './celebrity-card/Celebrity';
-import classes from './Celebrities.module.scss';
 import Controls from '../carousel/carousel-controls/Controls';
+
+import classes from './Celebrities.module.scss';
 
 export class Celebrities extends Component {
   state = {

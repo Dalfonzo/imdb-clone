@@ -1,8 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+
 import Card from './news-card/newsCard';
-import classes from './News.module.scss';
 import Controls from '../carousel/carousel-controls/Controls';
+
+import classes from './News.module.scss';
 
 class News extends React.Component {
   state = {
@@ -40,14 +42,14 @@ class News extends React.Component {
     const disableForward =
       Math.abs(position / 100) === Math.floor(data.length / 3);
     const disableBack = !position;
-    
+
     return (
       <div className={classes.wrapper}>
         <h2 className={classes.title}>{this.props.title}</h2>
         <h3 className={classes.subtitle}>{this.props.subtitle}</h3>
         <div className={classes.container1}>
           <div className={classes.container2} style={translateSlider}>
-            {data.map(({url, ...otras}) => (
+            {data.map(({ url, ...otras }) => (
               <Card key={url} {...otras} />
             ))}
           </div>

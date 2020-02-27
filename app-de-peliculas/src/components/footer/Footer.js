@@ -1,6 +1,6 @@
 import React from 'react';
-import classes from './Footer.module.scss';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebookSquare,
@@ -10,6 +10,8 @@ import {
   faYoutube,
   faAmazon
 } from '@fortawesome/free-brands-svg-icons';
+
+import classes from './Footer.module.scss';
 
 const footer = () => {
   return (

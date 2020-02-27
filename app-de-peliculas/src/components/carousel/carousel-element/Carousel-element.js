@@ -1,11 +1,13 @@
 import React from 'react';
-import classes from './Carousel-element.module.scss';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+
 import {
   faPlayCircle,
   faPlus,
   faBookmark
 } from '@fortawesome/free-solid-svg-icons';
+
+import classes from './Carousel-element.module.scss';
 
 const carouselElement = ({ title, overview, poster_path, backdrop_path }) => {
   const url = 'https://image.tmdb.org/t/p/';

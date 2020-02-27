@@ -1,6 +1,8 @@
 import React from 'react';
-import classes from './pop-up.module.scss';
+
 import girl from '../../../images/girl-bg.png';
+
+import classes from './pop-up.module.scss';
 
 const popUp = () => {
   return (

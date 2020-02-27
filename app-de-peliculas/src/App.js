@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-// Componentes
+
 import Header from './components/header/Header';
 import Carousel from './components/carousel/Carousel';
 import Slider from './components/movies-slider/Slider';
 import News from './components/news-slider/News';
-import './App.css';
 import Celebrities from './components/celebrities-slider/Celebrities';
 import Footer from './components/footer/Footer';
+
+import './App.css';
 
 class App extends Component {
   state = {

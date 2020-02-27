@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from '../../../images/IMDB.png';
-import classes from './Menu.module.scss';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+
+import logo from '../../../images/IMDB.png';
 import {
   faTimesCircle,
   faFilm,
@@ -11,6 +11,8 @@ import {
   faStar,
   faGlobeAmericas
 } from '@fortawesome/free-solid-svg-icons';
+
+import classes from './Menu.module.scss';
 
 const menu = ({ show, toggleMenu }) => {
   return (

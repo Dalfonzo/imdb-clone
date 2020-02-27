@@ -1,6 +1,6 @@
 import React from 'react';
-import classes from './Search-menu.module.scss';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+
 import {
   faSearch,
   faFilm,
@@ -11,6 +11,8 @@ import {
   faSearchPlus,
   faChevronRight
 } from '@fortawesome/free-solid-svg-icons';
+
+import classes from './Search-menu.module.scss';
 
 const searchMenu = () => {
   return (

@@ -1,8 +1,10 @@
 import React from 'react';
-import classes from './Slider.module.scss';
-import Card from './slider-card/Card';
 import axios from 'axios';
+
+import Card from './slider-card/Card';
 import Controls from '../carousel/carousel-controls/Controls';
+
+import classes from './Slider.module.scss';
 
 class Slider extends React.Component {
   state = {
@@ -48,7 +50,7 @@ class Slider extends React.Component {
         <p className={classes.description}>{this.props.description}</p>
         <div className={classes.container1}>
           <div className={classes.container2} style={translateSlider}>
-            {data.map(({id, ...otras}) => {
+            {data.map(({ id, ...otras }) => {
               return <Card key={id} {...otras} />;
             })}
           </div>
