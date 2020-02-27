@@ -33,8 +33,18 @@ class Header extends React.Component {
     });
   };
 
+  showScrolls = visible => {
+    let element = document.querySelector('body');
+    {
+      visible
+        ? (element.style.overflow = 'hidden')
+        : (element.style.overflow = 'auto');
+    }
+  };
+
   render() {
     let { displayMenu, popUp } = this.state;
+    this.showScrolls(displayMenu);
     return (
       <>
         <div className={classes.container}>
@@ -56,7 +66,7 @@ class Header extends React.Component {
             {popUp ? <PopUp /> : null}
           </Link>
           <Link to="/" className={classes.option}>
-            <Icon icon={faBookmark} className={classes.menu_icon}/>
+            <Icon icon={faBookmark} className={classes.menu_icon} />
             Watchlist
           </Link>
           <Link to="/" className={classes.option}>
