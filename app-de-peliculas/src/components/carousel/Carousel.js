@@ -20,9 +20,7 @@ class Carousel extends React.Component {
   };
 
   getApi = () => {
-    const url =
-      'https://api.themoviedb.org/3/movie/now_playing?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&page=1';
-    axios(url).then(({ data }) => {
+    axios(this.props.url).then(({ data }) => {
       this.setState({
         data: data.results
       });

@@ -42,7 +42,9 @@ class App extends Component {
     return (
       <div className="contenedor">
         <Header />
-        <Carousel />
+        <Carousel
+          url="https://api.themoviedb.org/3/movie/upcoming?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&page=1"
+        />
         <Slider
           title="What to Watch"
           subtitle="Fan Favorites"
@@ -58,13 +60,13 @@ class App extends Component {
           title="Explore what’s streaming"
           subtitle="Prime Video"
           description="Included with Prime"
-          url="https://api.themoviedb.org/3/movie/popular?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&page=3"
+          url="https://api.themoviedb.org/3/movie/popular?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&page=2"
         />
         <Slider
           title="Explore movies & TV shows"
           subtitle="In theathers"
           description="Showtimes near you"
-          url="https://api.themoviedb.org/3/movie/popular?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&page=2"
+          url="https://api.themoviedb.org/3/movie/now_playing?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&page=1"
         />
         <Celebrities
           subtitle="Born Today"
