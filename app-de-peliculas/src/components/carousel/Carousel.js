@@ -16,13 +16,15 @@ import classes from './Carousel.module.scss';
 class Carousel extends React.Component {
   state = {
     data: [],
-    position: 0
+    position: 0,
+    intervalId: 0
   };
 
-  getApi = () => {
+  getApi = intervalId => {
     axios(this.props.url).then(({ data }) => {
       this.setState({
-        data: data.results
+        data: data.results,
+        intervalId: intervalId
       });
     });
   };
@@ -44,8 +46,12 @@ class Carousel extends React.Component {
   };
 
   componentDidMount() {
-    this.getApi();
-    setInterval(this.adelante, 7000);
+    const intervalId = setInterval(this.adelante, 7000);
+    this.getApi(intervalId);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.state.intervalId);
   }
 
   componentDidUpdate() {
