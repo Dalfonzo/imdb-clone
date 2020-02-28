@@ -1,4 +1,93 @@
-iframe{
-  width: 1300px;
-  height: 80vh;
+.container {
+  padding-bottom: 3rem;
+
+  .icon {
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 1rem 0 1rem;
+
+    & > * {
+      cursor: pointer;
+    }
+
+    :nth-child(2) {
+      border-radius: 1000px;
+    
+    }
+
+    & > p {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        background-color: rgb(56, 56, 56);
+        border-radius: 5px;
+        .arrow {
+          opacity: 1;
+        }
+      }
+      .arrow {
+        font-size: 3rem;
+        opacity: 0.8;
+        margin-right: 0.5rem;
+      }
+    }
+    .share {
+      font-size: 2rem;
+    }
+  }
+
+  iframe {
+    margin-top: 2rem;
+    width: 1300px;
+    height: 80vh;
+    border: none;
+  }
+
+  .content {
+    margin-top: 2rem;
+    display: flex;
+    img {
+      flex: 1;
+      margin-top: 1rem;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+    .text {
+      margin-left: 3rem;
+      flex: 6;
+      color: white;
+      :first-child {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        font-weight: 600;
+        font-size: 3rem;
+      }
+      :nth-child(2) {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgb(58, 58, 58);
+      }
+      :nth-child(3) {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        font-style: italic;
+      }
+      :nth-child(4) {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        opacity: 0.8;
+      }
+    }
+  }
 }

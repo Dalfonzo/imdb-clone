@@ -70,7 +70,6 @@ class Carousel extends React.Component {
     const { data, position } = this.state;
     const final = 100 / data.length - 100;
     const translateHero = { transform: `translateX(${position}%)` };
-    // console.log(data);
     return (
       <>
         <div className={classes.container_1}>
@@ -80,7 +79,6 @@ class Carousel extends React.Component {
                 key={id}
                 style={{ textDecoration: 'none' }}
                 to={`video/${id}`}
-                onClick={() => console.log('jiji')}
               >
                 <CarouselElement key={id} {...otrasProps} />
               </Link>
