@@ -157,8 +157,10 @@ span {
       margin-right: 1rem;
       align-self: flex-start;
       color: rgb(88, 88, 88);
+
       &:nth-child(2) {
         color: #136cb2;
+
         &:hover {
           text-decoration: underline;
           cursor: pointer;

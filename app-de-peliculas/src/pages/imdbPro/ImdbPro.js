@@ -7,7 +7,7 @@ const imdbPro = () => {
     <div className={classes.wrapper}>
       <div className={classes.upper}>
         <p className={classes.title}>
-          IMDb<span>Pro</span>
+          IMDb<span className={classes.span}>Pro</span>
         </p>
         <p className={classes.subtitle}>An Amazon company</p>
         <div className={classes.form}>
@@ -22,12 +22,22 @@ const imdbPro = () => {
             Log in With Amazon
           </p>
           <p className={classes.option}>
-            <span className={`${classes.icon} ${classes.amazon}`} />
+            <span className={`${classes.icon} ${classes.imdb}`} />
             Log in With IMDb
           </p>
         </div>
       </div>
-      <div className={classes.bottom}>asd</div>
+      <div className={classes.bottom}>
+        <div className={classes.links}>
+          <p>Help</p>
+          <p>Subscriber Agreement</p>
+          <p>Privacy Policy</p>
+        </div>
+        <p className={classes.rights}>An Amazon company</p>
+        <p className={classes.rights}>
+          © 1990-2020 IMDb.com, Inc. or its affiliates.
+        </p>
+      </div>
     </div>
   );
 };
