@@ -45,7 +45,7 @@ class videoPlayer extends React.Component {
     return (
       <div className={classes.container}>
         <div className={classes.icon}>
-          <p>
+          <p onClick={this.props.back}>
             <Icon icon={faChevronLeft} className={classes.arrow} /> Back
           </p>
           <p>
