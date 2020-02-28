@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import CarouselElement from './carousel-element/Carousel-element';
 import Controls from './carousel-controls/Controls';
@@ -69,13 +70,20 @@ class Carousel extends React.Component {
     const { data, position } = this.state;
     const final = 100 / data.length - 100;
     const translateHero = { transform: `translateX(${position}%)` };
-
+    // console.log(data);
     return (
       <>
         <div className={classes.container_1}>
           <div className={classes.container_2} style={translateHero}>
             {data.map(({ id, ...otrasProps }) => (
-              <CarouselElement key={id} {...otrasProps} />
+              <Link
+                key={id}
+                style={{ textDecoration: 'none' }}
+                to={`video/${id}`}
+                onClick={() => console.log('jiji')}
+              >
+                <CarouselElement key={id} {...otrasProps} />
+              </Link>
             ))}
           </div>
           <Controls

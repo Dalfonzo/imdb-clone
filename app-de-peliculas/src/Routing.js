@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import Home from './pages/home/Home';
 import SignIn from './pages/sign-in/SignIn';
 import WithLayout from './hoc/WithLayout';
+import Video from './pages/video/Video'
 
 const routing = (function routing() {
   const routes = [
@@ -14,6 +15,10 @@ const routing = (function routing() {
     {
       path: '/signin',
       component: SignIn
+    },
+    {
+      path: '/video/:id',
+      component: Video
     }
   ];
 
