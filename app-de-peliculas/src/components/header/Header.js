@@ -52,7 +52,7 @@ class Header extends React.Component {
           <Link to="/" className={classes.option}>
             <img src={logo} alt="" />
           </Link>
-          <Link to="/" className={classes.option} onClick={this.toggleMenu}>
+          <Link to="#" className={classes.option} onClick={this.toggleMenu}>
             <Icon icon={faBars} className={classes.menu_icon} />
             Menu
           </Link>
