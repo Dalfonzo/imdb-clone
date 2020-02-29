@@ -41,6 +41,7 @@
       background-color: #424242;
       display: flex;
       color: white;
+      padding-bottom: 1rem;
 
       .foo {
         flex: 1;
@@ -113,8 +114,49 @@
       }
       .votes {
         flex: 3;
-        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        justify-self: center;
 
+        p:first-child {
+          flex: 1;
+          font-size: 2rem;
+          font-weight: 600;
+          padding-right: 0.5rem;
+          border-right: 1px solid rgb(117, 117, 117);
+          display: flex;
+
+          span {
+            font-size: 1rem;
+            color: white;
+            opacity: 0.5;
+            margin-left: 0.2rem;
+            height: min-content;
+            align-self: flex-end;
+          }
+
+          .star {
+            margin-right: 1rem;
+            color: #e4bb24;
+            font-size: 2.5rem;
+          }
+        }
+        p:nth-child(2) {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          padding: 0.2rem 0.9rem;
+          
+          .rstar {
+            font-size: 2.5rem;
+            opacity: 0.8;
+          }
+          &:hover {
+            background-color: rgb(29, 131, 247);
+            cursor: pointer;
+          }
+        }
       }
     }
   }

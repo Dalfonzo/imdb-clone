@@ -4,8 +4,11 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import {
   faPlus,
   faBookmark,
-  faAngleDoubleDown
+  faAngleDoubleDown,
+  faStar
 } from '@fortawesome/free-solid-svg-icons';
+
+import { faStar as rStar } from '@fortawesome/free-regular-svg-icons';
 
 import classes from './Title.module.scss';
 
@@ -65,8 +68,15 @@ const Title = ({ data }) => {
             </ul>
           </div>
           <div className={classes.votes}>
-            <p>{vote_average}</p>
-            <p>Rate this</p>
+            <p>
+              <Icon icon={faStar} className={classes.star} />
+              {vote_average}
+              <span>/10</span>
+            </p>
+            <p>
+              <Icon icon={rStar} className={classes.rstar} />
+              <p style={{display:'inline-block'}}>Rate this</p>
+            </p>
           </div>
         </div>
         <div className={classes.hero}>
