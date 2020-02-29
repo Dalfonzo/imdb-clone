@@ -105,10 +105,12 @@
         ul {
           display: flex;
           li {
-            padding: 0 1rem;
+            padding: 0 1rem 0 0;
           }
           li:not(:first-child) {
             border-left: 1px solid rgb(117, 117, 117);
+            padding: 0 1rem;
+
           }
         }
       }
@@ -141,13 +143,13 @@
             font-size: 2.5rem;
           }
         }
-        p:nth-child(2) {
+        .rating {
           flex: 1;
           display: flex;
           align-items: center;
           text-align: center;
           padding: 0.2rem 0.9rem;
-          
+
           .rstar {
             font-size: 2.5rem;
             opacity: 0.8;
@@ -160,7 +162,53 @@
       }
     }
   }
+  .hero {
+    display: flex;
+    background-color: #424242;
+    height: 25rem;
 
+    & > div {
+      background-position: center;
+      background-size: cover;
+      opacity: .9;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .poster {
+      flex: 25%;
+    }
+
+    .backdrop {
+      margin-left: 0.5rem;
+      flex: 75%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        .play {
+          background-color: rgba(0, 0, 0, 0.171);
+        }
+      }
+      .play {
+        color: white;
+        bottom: 5%;
+        left: 5%;
+        font-size: 4rem;
+        border-radius: 100px;
+      }
+      p {
+        position: absolute;
+        color: white;
+        bottom: 5%;
+        left: 5%;
+        text-transform: capitalize;
+        opacity: 0.8;
+      }
+    }
+  }
   .right_side {
     flex: 30%;
   }

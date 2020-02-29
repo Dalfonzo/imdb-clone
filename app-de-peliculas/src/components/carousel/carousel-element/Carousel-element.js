@@ -1,11 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 
-import {
-  faPlayCircle,
-  faPlus,
-  faBookmark
-} from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faBookmark } from '@fortawesome/free-solid-svg-icons';
+import { faPlayCircle } from '@fortawesome/free-regular-svg-icons';
 
 import classes from './Carousel-element.module.scss';
 

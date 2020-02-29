@@ -1,19 +1,23 @@
 import React from 'react';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
+import CarouselElement from '../carousel/carousel-element/Carousel-element';
 import {
   faPlus,
   faBookmark,
   faAngleDoubleDown,
   faStar
 } from '@fortawesome/free-solid-svg-icons';
-
-import { faStar as rStar } from '@fortawesome/free-regular-svg-icons';
+import {
+  faStar as rStar,
+  faPlayCircle
+} from '@fortawesome/free-regular-svg-icons';
 
 import classes from './Title.module.scss';
 
 const Title = ({ data }) => {
-  const baseUrl = 'https://image.tmdb.org/t/p/w500';
+  const baseUrl = 'https://image.tmdb.org/t/p/';
   let {
     title,
     original_title,
@@ -26,7 +30,7 @@ const Title = ({ data }) => {
   } = data;
 
   console.log(data);
-  let gen = genres.map(g => g.name).join(', ');
+  let gen = genres.map(g => g.name).join(' ,   ');
 
   let date = release_date.slice(0, 4);
 
@@ -73,15 +77,28 @@ const Title = ({ data }) => {
               {vote_average}
               <span>/10</span>
             </p>
-            <p>
+            <div className={classes.rating}>
               <Icon icon={rStar} className={classes.rstar} />
-              <p style={{display:'inline-block'}}>Rate this</p>
-            </p>
+              <p style={{ display: 'inline-block' }}>Rate this</p>
+            </div>
           </div>
         </div>
         <div className={classes.hero}>
-          <img src={baseUrl + poster_path} alt="" />
-          <img src={baseUrl + backdrop_path} alt="" />
+          <div
+            className={classes.poster}
+            style={{
+              backgroundImage: `url('${baseUrl + 'w185' + poster_path}')`
+            }}
+          ></div>
+          <div
+            className={classes.backdrop}
+            style={{
+              backgroundImage: `url('${baseUrl + 'w500' + backdrop_path}')`
+            }}
+          >
+            <Icon icon={faPlayCircle} className={classes.play} />
+            <p>trailer</p>
+          </div>
         </div>
       </div>
       <div className={classes.right_side}>2</div>
