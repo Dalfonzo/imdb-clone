@@ -2,6 +2,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/*Inicio de Global Resets*/
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +13,7 @@ code {
 *::after {
   box-sizing: inherit;
 }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -25,3 +27,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
 }
+/*Fin de Global Resets*/
+
+/*Inicio de Containers para todas las paginas*/
+
+.container-sm {
+  width: 1000px;
+  background-color: white;
+  margin: auto;
+}
+
+.wrapper-sm {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    #020024 0%,
+    rgba(195, 195, 195, 1) 0%,
+    rgba(255, 253, 253, 1) 100%
+  );
+  height: 100%;
+}
+
+/*Fin de Containers para todas las paginas*/
