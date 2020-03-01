@@ -6,7 +6,8 @@ import {
   faPlus,
   faBookmark,
   faAngleDoubleDown,
-  faStar
+  faStar,
+  faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faStar as rStar,
@@ -159,12 +160,16 @@ const Title = ({ data, id }) => {
             Add to Watchlist
           </button>
         </div>
-        <div>
+        <div className={classes.imdbPro}>
           <img
             src="https://m.media-amazon.com/images/G/01/imdb/IMDbConsumerSiteProTitleViews/images/logo/pro_logo_dark-3176609149._CB468516142_.png"
             alt=""
           />
-          <p>View production, box office, & company info</p>
+
+          <p>
+            View production, box office, & company info{' '}
+            <Icon icon={faExternalLinkAlt} className={classes.external} />
+          </p>
         </div>
       </div>
       <div className={classes.right_side}>2</div>

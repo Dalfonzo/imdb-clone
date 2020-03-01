@@ -160,6 +160,7 @@
         }
       }
     }
+
     .overview {
       display: flex;
       flex-direction: column;
@@ -167,6 +168,7 @@
       font-size: 1.3rem;
       padding: 2rem;
       border-bottom: 1px solid rgba(0, 0, 0, 0.082);
+
       p {
         margin: 0.3rem 0;
         color: #136cbf;
@@ -205,6 +207,29 @@
         &:hover {
           opacity: 0.9;
         }
+      }
+    }
+  }
+  .imdbPro {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #eee;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.082);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    img {
+      width: 6rem;
+    }
+
+    p {
+      color: #136cbf;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
