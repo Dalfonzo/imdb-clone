@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import Title from '../../components/title/Title';
+import Cast from '../../components/cast-list/Cast';
+import classes from './MovieDetails.module.scss';
 
 class MovieDetails extends Component {
   state = {
@@ -23,10 +25,25 @@ class MovieDetails extends Component {
   }
 
   render() {
+    let {
+      credits = {
+        cast: []
+      }
+    } = this.state.data;
+    console.log(credits.cast);
+
     return (
       <div className="wrapper-sm">
         <div className="container-sm">
-          <Title data={this.state.data} id={this.props.match.params.id} />
+          <div className={classes.container}>
+            <div className={classes.left_side}>
+              <Title data={this.state.data} id={this.props.match.params.id} />
+              <Cast cast={credits.cast} />
+            </div>
+            <div className={classes.right_side}></div>
+          </div>
+
+          {/* <Title data={this.state.data} id={this.props.match.params.id} /> */}
         </div>
       </div>
     );

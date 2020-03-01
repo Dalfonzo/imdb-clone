@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  font-size: 1.2rem;
+
+  .left_side {
+    flex: 70%;
+    border-right: 0.3rem solid rgb(117, 117, 117);
+  }
+  .right_side {
+    flex: 30%;
+  }
+}

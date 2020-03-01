@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: min-content;
+
+  div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 3rem;
+      height: 4.5rem;
+    }
+  }
+
+  p:not(:nth-child(3)) {
+    flex: 3;
+    color: #136cbf;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  p:nth-child(3) {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(141, 141, 141);
+  }
+}
