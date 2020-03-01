@@ -24,6 +24,10 @@ const routing = (function routing() {
     {
       path: '/title/:id',
       component: MovieDetails
+    },
+    {
+      path: '/title/:id/video/:id',
+      component: Video
     }
   ];
 

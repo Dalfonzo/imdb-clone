@@ -2,7 +2,6 @@ import React from 'react';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
-import CarouselElement from '../carousel/carousel-element/Carousel-element';
 import {
   faPlus,
   faBookmark,
@@ -16,20 +15,59 @@ import {
 
 import classes from './Title.module.scss';
 
-const Title = ({ data }) => {
+const findCrew = (crew, roll) => {
+  let arr = [];
+
+  for (crew of crew) {
+    if (crew.job === roll) {
+      if (arr.length < 4) {
+        arr.push(crew.name);
+      } else {
+        break;
+      }
+    }
+  }
+  return arr;
+};
+
+const findStars = cast => {
+  let arr = [];
+  for (cast of cast) {
+    if (arr.length < 4) {
+      arr.push(cast.name);
+    } else {
+      break;
+    }
+  }
+  return arr;
+};
+
+const Title = ({ data, id }) => {
   const baseUrl = 'https://image.tmdb.org/t/p/';
+  // console.log(data);
+
   let {
-    title,
-    original_title,
-    release_date = 'default',
+    title = '',
+    original_title = '',
+    release_date = '',
     runtime = 0,
-    genres = [1, 2, 3],
-    vote_average,
-    backdrop_path,
-    poster_path
+    genres = [],
+    vote_average = 0,
+    backdrop_path = '',
+    poster_path = '',
+    overview = '',
+    credits = {
+      crew: [],
+      cast: []
+    }
   } = data;
 
-  console.log(data);
+  let director = findCrew(credits.crew, 'Director').join(' , ');
+  let writers = findCrew(credits.crew, 'Screenplay').join(' , ');
+  let stars = findStars(credits.cast, 'name', 'name').join(' , ');
+
+  // console.log(stars);
+  // console.log(data);
   let gen = genres.map(g => g.name).join(' ,   ');
 
   let date = release_date.slice(0, 4);
@@ -84,12 +122,14 @@ const Title = ({ data }) => {
           </div>
         </div>
         <div className={classes.hero}>
+          {/* <Link to={`video/${id}`}> */}
           <div
             className={classes.poster}
             style={{
               backgroundImage: `url('${baseUrl + 'w185' + poster_path}')`
             }}
-          ></div>
+          />
+          {/* </Link> */}
           <div
             className={classes.backdrop}
             style={{
@@ -99,6 +139,32 @@ const Title = ({ data }) => {
             <Icon icon={faPlayCircle} className={classes.play} />
             <p>trailer</p>
           </div>
+        </div>
+        <div className={classes.overview}>
+          <p>{overview}</p>
+          <p>
+            <b>Director: </b>
+            {director}
+          </p>
+          <p>
+            <b>Writers: </b>
+            {writers}
+          </p>
+          <p>
+            <b>Stars: </b>
+            {stars}
+          </p>
+          <button>
+            <Icon icon={faPlus} className={classes.play} />
+            Add to Watchlist
+          </button>
+        </div>
+        <div>
+          <img
+            src="https://m.media-amazon.com/images/G/01/imdb/IMDbConsumerSiteProTitleViews/images/logo/pro_logo_dark-3176609149._CB468516142_.png"
+            alt=""
+          />
+          <p>View production, box office, & company info</p>
         </div>
       </div>
       <div className={classes.right_side}>2</div>

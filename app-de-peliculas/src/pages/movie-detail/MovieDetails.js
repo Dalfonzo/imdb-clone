@@ -8,25 +8,25 @@ class MovieDetails extends Component {
     data: []
   };
 
-  getApi = url => {
-    axios(url).then(({ data }) => {
+  getApi = async url => {
+    const result = await axios(url);
+    if (result.data) {
       this.setState({
-        data: data
+        data: result.data
       });
-    });
+    }
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     let url = `https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&append_to_response=credits,images,keywords,reviews,similar`;
-    this.getApi(url);
+    await this.getApi(url);
   }
 
   render() {
-
     return (
       <div className="wrapper-sm">
         <div className="container-sm">
-          <Title data={this.state.data} />
+          <Title data={this.state.data} id={this.props.match.params.id} />
         </div>
       </div>
     );

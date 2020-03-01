@@ -110,7 +110,6 @@
           li:not(:first-child) {
             border-left: 1px solid rgb(117, 117, 117);
             padding: 0 1rem;
-
           }
         }
       }
@@ -161,7 +160,55 @@
         }
       }
     }
+    .overview {
+      display: flex;
+      flex-direction: column;
+      background-color: #eee;
+      font-size: 1.3rem;
+      padding: 2rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.082);
+      p {
+        margin: 0.3rem 0;
+        color: #136cbf;
+      }
+      & > *:not(:first-child) {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      p:first-child {
+        margin-bottom: 2rem;
+        color: black;
+      }
+      b {
+        opacity: 0.9;
+        color: black;
+        &:hover {
+          cursor: initial;
+        }
+      }
+      button {
+        svg {
+          margin: 0 0.5rem 0 2rem;
+        }
+        display: flex;
+        align-content: flex-start;
+        width: 50%;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        font-weight: 600;
+        font-size: 1.3rem;
+        background-color: #0d5baf;
+        padding: 1.5rem 0;
+        margin: 1rem 0;
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
   }
+
   .hero {
     display: flex;
     background-color: #424242;
@@ -170,7 +217,8 @@
     & > div {
       background-position: center;
       background-size: cover;
-      opacity: .9;
+      opacity: 0.9;
+
       &:hover {
         cursor: pointer;
       }
@@ -209,6 +257,7 @@
       }
     }
   }
+
   .right_side {
     flex: 30%;
   }
