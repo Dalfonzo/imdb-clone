@@ -1,15 +1,23 @@
 import React from 'react';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+// import { Link } from 'react-router-dom';
 
 import { faPlus, faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faPlayCircle } from '@fortawesome/free-regular-svg-icons';
 
 import classes from './Carousel-element.module.scss';
 
-const carouselElement = ({ title, overview, poster_path, backdrop_path }) => {
+const carouselElement = ({
+  title,
+  overview,
+  poster_path,
+  backdrop_path,
+  key
+}) => {
   const url = 'https://image.tmdb.org/t/p/';
   return (
     <div className={classes.container}>
+      {/* <Link key={key} style={{ textDecoration: 'none', position:'relative' }} to={`video/${key}`}> */}
       <div className={classes.foo}>
         <Icon icon={faBookmark} className={classes.bookmark} />
         <Icon icon={faPlus} className={classes.plus} />
@@ -21,8 +29,8 @@ const carouselElement = ({ title, overview, poster_path, backdrop_path }) => {
             'w500' +
             poster_path}) center/cover no-repeat`
         }}
-      ></div>
-
+      />
+      {/* </Link> */}
       <div
         className={classes.backdrop}
         style={{

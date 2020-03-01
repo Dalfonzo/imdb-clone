@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import Card from './slider-card/Card';
 import Controls from '../carousel/carousel-controls/Controls';
@@ -50,9 +51,14 @@ class Slider extends React.Component {
         <p className={classes.description}>{this.props.description}</p>
         <div className={classes.container1}>
           <div className={classes.container2} style={translateSlider}>
-            {data.map(({ id, ...otras }) => {
-              return <Card key={id} {...otras} />;
-            })}
+
+          {data.map(({ id, ...otras }) => {
+            return (
+              <Link to={`title/${id}`} style={{textDecoration:'none'}}>
+                <Card key={id} {...otras} />
+              </Link>
+            );
+          })}
           </div>
           <Controls
             direction="back"

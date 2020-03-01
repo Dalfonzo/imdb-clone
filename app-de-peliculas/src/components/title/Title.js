@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
@@ -44,6 +44,7 @@ const findStars = cast => {
 };
 
 const Title = ({ data, id }) => {
+  useEffect(() => window.scrollTo(0, 0), []);
   const baseUrl = 'https://image.tmdb.org/t/p/';
 
   let {
