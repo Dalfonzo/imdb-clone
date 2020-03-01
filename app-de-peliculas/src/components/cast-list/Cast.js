@@ -13,8 +13,8 @@ const cast = ({ cast }) => {
       <p>Cast overview, first billed only:</p>
       <ul className={classes.list}>
         {cast.map(({ id, ...otras }) => (
-          <li>
-            <CastElement key={id} {...otras} />
+          <li key={id}>
+            <CastElement {...otras} />
           </li>
         ))}
       </ul>

@@ -30,7 +30,6 @@ class MovieDetails extends Component {
         cast: []
       }
     } = this.state.data;
-    console.log(credits.cast);
 
     return (
       <div className="wrapper-sm">

@@ -51,14 +51,17 @@ class Slider extends React.Component {
         <p className={classes.description}>{this.props.description}</p>
         <div className={classes.container1}>
           <div className={classes.container2} style={translateSlider}>
-
-          {data.map(({ id, ...otras }) => {
-            return (
-              <Link to={`title/${id}`} style={{textDecoration:'none'}}>
-                <Card key={id} {...otras} />
-              </Link>
-            );
-          })}
+            {data.map(({ id, ...otras }) => {
+              return (
+                <Link
+                  key={id}
+                  to={`title/${id}`}
+                  style={{ textDecoration: 'none' }}
+                >
+                  <Card key={id} {...otras} />
+                </Link>
+              );
+            })}
           </div>
           <Controls
             direction="back"
