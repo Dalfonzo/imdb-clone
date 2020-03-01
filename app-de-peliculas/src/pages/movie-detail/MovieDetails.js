@@ -30,7 +30,7 @@ class MovieDetails extends Component {
         cast: []
       }
     } = this.state.data;
-
+    console.log(this.state.data)
     return (
       <div className="wrapper-sm">
         <div className="container-sm">
@@ -41,8 +41,6 @@ class MovieDetails extends Component {
             </div>
             <div className={classes.right_side}></div>
           </div>
-
-          {/* <Title data={this.state.data} id={this.props.match.params.id} /> */}
         </div>
       </div>
     );

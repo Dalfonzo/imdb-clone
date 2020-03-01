@@ -75,13 +75,7 @@ class Carousel extends React.Component {
         <div className={classes.container_1}>
           <div className={classes.container_2} style={translateHero}>
             {data.map(({ id, ...otrasProps }) => (
-              <Link
-                key={id}
-                style={{ textDecoration: 'none' }}
-                to={`video/${id}`}
-              >
-                <CarouselElement key={id} {...otrasProps} />
-              </Link>
+              <CarouselElement key={id} {...otrasProps} id={id} />
             ))}
           </div>
           <Controls

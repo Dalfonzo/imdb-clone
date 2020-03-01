@@ -118,15 +118,14 @@ const Title = ({ data, id }) => {
         </div>
       </div>
       <div className={classes.hero}>
-        {/* <Link to={`video/${id}`}> */}
         <div
           className={classes.poster}
           style={{
             backgroundImage: `url('${baseUrl + 'w185' + poster_path}')`
           }}
         />
-        {/* </Link> */}
-        <div
+        <Link
+          to={`video/${id}`}
           className={classes.backdrop}
           style={{
             backgroundImage: `url('${baseUrl + 'w500' + backdrop_path}')`
@@ -134,7 +133,7 @@ const Title = ({ data, id }) => {
         >
           <Icon icon={faPlayCircle} className={classes.play} />
           <p>trailer</p>
-        </div>
+        </Link>
       </div>
       <div className={classes.overview}>
         <p>{overview}</p>

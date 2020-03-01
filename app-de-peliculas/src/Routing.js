@@ -26,7 +26,7 @@ const routing = (function routing() {
       component: MovieDetails
     },
     {
-      path: '/title/:id/video/:id',
+      path: '/title/video/:id',
       component: Video
     }
   ];
