@@ -11,6 +11,8 @@ function Similar({ movies }) {
 
   const baseUrl = 'https://image.tmdb.org/t/p/';
 
+  if (!movies.length) return null;
+  
   return (
     <div className={classes.wrapper}>
       <p className={classes.title}>More like this</p>

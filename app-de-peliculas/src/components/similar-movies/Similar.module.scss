@@ -1,7 +1,8 @@
 .wrapper {
   position: relative;
-  margin: 2rem 1rem;
+  padding: 2rem 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.082);
+
   .title {
     font-size: 2.5rem;
     margin-left: 1rem;
@@ -9,8 +10,8 @@
   }
   .learn {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 1rem;
+    top: 1rem;
     margin: 0 0.5rem;
     color: #136cbf;
     &:hover {
@@ -31,7 +32,6 @@
       display: flex;
       flex-wrap: wrap;
       margin: 0 2rem;
-      border: 1px solid blue;
       justify-content: center;
       align-items: flex-start;
       align-content: flex-start;
@@ -46,7 +46,6 @@
       margin: 0 2rem 0 0;
       flex: 60%;
       display: flex;
-      border: 1px solid red;
       align-items: flex-start;
       .big {
         display: flex;

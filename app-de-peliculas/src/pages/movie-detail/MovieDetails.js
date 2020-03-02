@@ -30,15 +30,15 @@ class MovieDetails extends Component {
     await this.getApi(url);
   }
   render() {
-  console.log(this.state.similar)
+    console.log(this.state.similar);
     return (
       <div className="wrapper-sm">
         <div className="container-sm">
           <div className={classes.container}>
             <div className={classes.left_side}>
               <Title data={this.state.data} id={this.props.match.params.id} />
-              <Cast cast={this.state.credits} />
               <Similar movies={this.state.similar} />
+              <Cast cast={this.state.credits} />
             </div>
             <div className={classes.right_side}></div>
           </div>
