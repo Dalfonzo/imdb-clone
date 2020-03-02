@@ -22,8 +22,10 @@
         rgba(240, 231, 107, 0.88) 0%,
         rgba(245, 215, 43, 1) 100%
       );
-      // border-color: #d5ab55 #c93 #c93 #d5ab55;
-      // background-color: #f3ce00;
+      &:hover{
+        cursor: pointer;
+      }
+     
     }
   }
   .right {
