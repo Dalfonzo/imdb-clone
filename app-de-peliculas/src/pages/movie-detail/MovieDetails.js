@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import Title from '../../components/title/Title';
 import Cast from '../../components/cast-list/Cast';
+import Similar from '../../components/similar-movies/Similar';
+
 import classes from './MovieDetails.module.scss';
 
 class MovieDetails extends Component {
@@ -28,9 +30,12 @@ class MovieDetails extends Component {
     let {
       credits = {
         cast: []
+      },
+      similar = {
+        results: []
       }
     } = this.state.data;
-    console.log(this.state.data)
+    // console.log(similar.results);
     return (
       <div className="wrapper-sm">
         <div className="container-sm">
@@ -38,6 +43,7 @@ class MovieDetails extends Component {
             <div className={classes.left_side}>
               <Title data={this.state.data} id={this.props.match.params.id} />
               <Cast cast={credits.cast} />
+              <Similar movies={similar.results} />
             </div>
             <div className={classes.right_side}></div>
           </div>

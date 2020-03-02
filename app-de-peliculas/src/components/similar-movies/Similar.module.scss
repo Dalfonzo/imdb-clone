@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  width: 100%;
+  .preview {
+    flex: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 2rem;
+    border: 1px solid blue;
+    justify-content: center;
+
+    img {
+      margin: 0.5rem;
+      width: 7rem;
+    }
+  }
+
+  .show {
+    margin: 0 2rem 0 0;
+    flex: 60%;
+    display: flex;
+    border: 1px solid red;
+    img{
+      width: 13rem;
+    }
+
+    
+  }
+}
