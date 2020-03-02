@@ -9,14 +9,18 @@ import classes from './MovieDetails.module.scss';
 
 class MovieDetails extends Component {
   state = {
-    data: []
+    data: [],
+    credits: [],
+    similar: []
   };
 
   getApi = async url => {
     const result = await axios(url);
     if (result.data) {
       this.setState({
-        data: result.data
+        data: result.data,
+        credits: result.data.credits.cast,
+        similar: result.data.similar.results
       });
     }
   };
@@ -25,25 +29,16 @@ class MovieDetails extends Component {
     let url = `https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&append_to_response=credits,images,keywords,reviews,similar`;
     await this.getApi(url);
   }
-
   render() {
-    let {
-      credits = {
-        cast: []
-      },
-      similar = {
-        results: []
-      }
-    } = this.state.data;
-    // console.log(similar.results);
+  console.log(this.state.similar)
     return (
       <div className="wrapper-sm">
         <div className="container-sm">
           <div className={classes.container}>
             <div className={classes.left_side}>
               <Title data={this.state.data} id={this.props.match.params.id} />
-              <Cast cast={credits.cast} />
-              <Similar movies={similar.results} />
+              <Cast cast={this.state.credits} />
+              <Similar movies={this.state.similar} />
             </div>
             <div className={classes.right_side}></div>
           </div>

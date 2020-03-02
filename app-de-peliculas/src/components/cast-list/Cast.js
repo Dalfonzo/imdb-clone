@@ -22,4 +22,4 @@ const cast = ({ cast }) => {
   );
 };
 
-export default cast;
+export default React.memo(cast);

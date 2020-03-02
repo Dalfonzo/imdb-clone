@@ -169,4 +169,4 @@ const Title = ({ data, id }) => {
   );
 };
 
-export default Title;
+export default React.memo(Title);
