@@ -4,6 +4,8 @@ import axios from 'axios';
 import Title from '../../components/title/Title';
 import Cast from '../../components/cast-list/Cast';
 import Similar from '../../components/similar-movies/Similar';
+import DetailsFooter from '../../components/details-footer/DetailsFooter';
+import HistoryFooter from '../../components/history-footer/HistoryFooter';
 
 import classes from './MovieDetails.module.scss';
 
@@ -39,10 +41,12 @@ class MovieDetails extends Component {
               <Title data={this.state.data} id={this.props.match.params.id} />
               <Similar movies={this.state.similar} />
               <Cast cast={this.state.credits} />
+              <DetailsFooter />
             </div>
             <div className={classes.right_side}></div>
           </div>
         </div>
+        <HistoryFooter />
       </div>
     );
   }

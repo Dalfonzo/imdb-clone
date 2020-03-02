@@ -144,12 +144,20 @@ span {
   }
 
   .history {
+    border-top: 2px solid rgba(0, 0, 0, 0.082);
+
     display: flex;
     justify-content: space-between;
     margin: auto;
     max-width: 100rem;
-    background-color: rgb(228, 228, 228);
+    background-color: #ededec;
     padding-bottom: 8rem;
+
+    .title {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-left: 2rem;
+    }
     p {
       margin: 0;
       padding-top: 2rem;
@@ -160,6 +168,7 @@ span {
 
       &:nth-child(2) {
         color: #136cb2;
+        margin-right: 2rem;
 
         &:hover {
           text-decoration: underline;
