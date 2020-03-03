@@ -3,6 +3,15 @@ code {
     monospace;
 }
 /*Inicio de Global Resets*/
+
+span {
+  text-decoration: none;
+  color: inherit;
+}
+span:hover {
+  text-decoration: none;
+  color: inherit;
+}
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +41,7 @@ body {
 /*Inicio de Containers para todas las paginas*/
 
 .container-sm {
-  width: 1000px;
+  max-width: 1000px;
   background-color: white;
   margin: auto;
 }
@@ -49,3 +58,16 @@ body {
 }
 
 /*Fin de Containers para todas las paginas*/
+
+/* Querys */
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media only screen and (max-width: 470px) {
+  html {
+    font-size: 55%;
+  }
+}

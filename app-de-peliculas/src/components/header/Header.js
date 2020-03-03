@@ -54,7 +54,7 @@ class Header extends React.Component {
           </Link>
           <Link to="#" className={classes.option} onClick={this.toggleMenu}>
             <Icon icon={faBars} className={classes.menu_icon} />
-            Menu
+            <span>Menu</span>
           </Link>
           <SearchBox getData={this.getData} />
           <Link

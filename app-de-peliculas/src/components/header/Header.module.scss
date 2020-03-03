@@ -12,15 +12,47 @@
     max-width: 130rem;
     margin: auto;
 
+    @media only screen and (max-width: 765px) {
+      a:nth-child(4) {
+        display: none;
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      a:nth-child(5) {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      a:nth-child(2) span {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 390px) {
+      a:first-child {
+        width:20%;
+      }
+      a:nth-child(2){
+        order: -1;
+        width: 15%;
+      }
+    }
+
     .option {
       display: flex;
       color: white;
       text-decoration: none;
       align-content: center;
 
+      @media only screen and (max-width: 600px) {
+      justify-content: stretch;
+    }
+
       &:not(:first-child) {
         padding: 0.6em;
       }
+
 
       &:hover {
         border-radius: 5px;

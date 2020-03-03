@@ -70,7 +70,7 @@ class Carousel extends React.Component {
     const final = 100 / data.length - 100;
     const translateHero = { transform: `translateX(${position}%)` };
     return (
-      <>
+      <div className={classes.wrapper}>
         <div className={classes.container_1}>
           <div className={classes.container_2} style={translateHero}>
             {data.map(({ id, ...otrasProps }) => (
@@ -89,7 +89,7 @@ class Carousel extends React.Component {
           />
         </div>
         <p className={classes.sugestion}>Browse trailers</p>
-      </>
+      </div>
     );
   }
 }

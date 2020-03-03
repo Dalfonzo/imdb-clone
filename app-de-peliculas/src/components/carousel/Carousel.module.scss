@@ -1,27 +1,32 @@
-.container_1 {
-  margin-top: 2rem;
-  position: relative;
-  height: 75vh;
+.wrapper {
+  margin: auto;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  .container_2 {
+  .container_1 {
+    margin-top: 2rem;
+    position: relative;
+    height: 75vh;
+    overflow: hidden;
     display: flex;
-    position: absolute;
-    transform: translateX(-10px);
-    transition: transform 0.8s ease-in;
-    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .container_2 {
+      display: flex;
+      position: absolute;
+      transform: translateX(-10px);
+      transition: transform 0.8s ease-in;
+      height: 100%;
+    }
   }
-}
-.sugestion {
-  font-size: 1.5rem;
-  margin-left: 2rem;
-  margin-top: 2rem;
-  color: #49a7ff;
-  &:hover {
-    cursor: pointer;
-    text-decoration: underline;
+  .sugestion {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    color: #49a7ff;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
   }
 }
