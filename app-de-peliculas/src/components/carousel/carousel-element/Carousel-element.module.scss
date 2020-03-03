@@ -7,6 +7,10 @@
   overflow: hidden;
   height: 100%;
 
+  @media only screen and (max-width: 1200px) {
+    width: 100vw;
+  }
+
   .foo {
     position: absolute;
     top: -0.3rem;
@@ -24,6 +28,9 @@
       font-size: 6rem;
       opacity: 0.8;
       color: black;
+      @media only screen and (max-width: 600px) {
+        font-size: 5rem;
+      }
     }
 
     .plus {
@@ -33,6 +40,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      @media only screen and (max-width: 600px) {
+        font-size: 1.5rem;
+      }
     }
   }
 
@@ -45,6 +55,10 @@
     overflow: hidden;
     background-repeat: no-repeat;
 
+    @media only screen and (max-width: 765px) {
+      display: none;
+    }
+
     &:hover {
       opacity: 0.8;
     }
@@ -54,12 +68,14 @@
     margin-left: 1rem;
     width: 74%;
     overflow: hidden;
-    background-repeat: no-repeat;
     display: flex;
     align-items: flex-end;
     position: relative;
     text-decoration: none;
     color: white;
+    @media only screen and (max-width: 765px) {
+      width: 100%;
+    }
 
     &:hover {
       opacity: 0.8;
@@ -69,6 +85,15 @@
       z-index: 10;
       font-size: 11rem;
       margin: 0 2rem 5rem 4rem;
+      @media only screen and (max-width: 975px) {
+        font-size: 9rem;
+      }
+      @media only screen and (max-width: 765px) {
+        font-size: 8rem;
+      }
+      @media only screen and (max-width: 470px) {
+        font-size: 6rem;
+      }
     }
     .backdrop_text {
       z-index: 10;
@@ -79,11 +104,20 @@
         font-weight: 400;
         color: white;
         padding: 1rem 0;
+        @media only screen and (max-width: 765px) {
+          font-size: 3rem;
+        }
+        @media only screen and (max-width: 470px) {
+          font-size: 2rem;
+        }
       }
       p {
         font-size: 2rem;
         font-weight: 600;
         color: #a3a3a3;
+        @media only screen and (max-width: 470px) {
+          font-size: 1.5rem;
+        }
       }
     }
 

@@ -10,7 +10,24 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-
+    @media only screen and (max-width: 1200px) {
+      height: 70vh;
+    }
+    @media only screen and (max-width: 970px) {
+      height: 60vh;
+    }
+    @media only screen and (max-width: 765px) {
+      height: 55vh;
+    }
+    @media only screen and (max-width: 600px) {
+      height: 50vh;
+    }
+    @media only screen and (max-width: 470px) {
+      height: 45vh;
+    }
+    @media only screen and (max-width: 390px) {
+      height: 40vh;
+    }
     .container_2 {
       display: flex;
       position: absolute;
