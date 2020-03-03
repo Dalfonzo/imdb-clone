@@ -12,6 +12,13 @@
   font-weight: 600;
   padding: 2rem 0;
 
+  @media only screen and (max-width: 870px) {
+    font-size: 2rem;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 1.5rem;
+  }
+
   .icon {
     margin-right: 1.5rem;
   }
@@ -22,8 +29,9 @@
 }
 
 .wrapper {
-  width: 1300px;
+  width: 100%;
   margin: auto;
+  background-color: black;
 }
 
 .container {
@@ -37,15 +45,37 @@
   z-index: 100;
   top: 0;
 
+  @media only screen and (max-width: 870px) {
+    font-size: 1.3rem;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3rem 8rem 3rem 8rem;
     margin: 0 4rem;
+    @media only screen and (max-width: 600px) {
+      margin: 0;
+    }
+    @media only screen and (max-width: 390px) {
+      padding: 2rem;
+    }
 
     img {
       width: 12rem;
+
+      @media only screen and (max-width: 870px) {
+        width: 10rem;
+      }
+      @media only screen and (max-width: 600px) {
+        width: 8rem;
+      }
+
       &:hover {
         cursor: pointer;
       }
@@ -53,6 +83,14 @@
 
     .icon {
       font-size: 5rem;
+
+      @media only screen and (max-width: 870px) {
+        font-size: 4rem;
+      }
+      @media only screen and (max-width: 600px) {
+        font-size: 3rem;
+      }
+
       &:hover {
         color: #b6951c;
         cursor: pointer;
@@ -81,4 +119,17 @@
   visibility: visible;
   top: 0;
   transition: visibility 0s, top 0.2s ease-in;
+}
+
+@media only screen and (max-width: 390px) {
+  .list {
+    display: none;
+  }
+  .list_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: max-content;
+  }
 }
