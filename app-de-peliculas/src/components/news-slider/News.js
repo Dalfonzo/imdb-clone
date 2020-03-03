@@ -50,7 +50,9 @@ class News extends React.Component {
         <div className={classes.container1}>
           <div className={classes.container2} style={translateSlider}>
             {data.map(({ url, ...otras }) => (
-              <Card key={url} {...otras} />
+              <a href={url} target="_blank" style={{ textDecoration: 'none' }}>
+                <Card key={url} {...otras} />
+              </a>
             ))}
           </div>
           <Controls
