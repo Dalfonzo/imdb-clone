@@ -46,6 +46,14 @@
       height: 24rem;
       width: 34rem;
     }
+    @media only screen and (max-width: 315px) {
+      height: 20rem;
+      width: 30rem;
+    }
+    @media only screen and (max-width: 280px) {
+      height: 16rem;
+      width: 26rem;
+    }
 
      
 
