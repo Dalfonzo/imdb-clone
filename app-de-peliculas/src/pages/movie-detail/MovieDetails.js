@@ -6,6 +6,7 @@ import Cast from '../../components/cast-list/Cast';
 import Similar from '../../components/similar-movies/Similar';
 import DetailsFooter from '../../components/details-footer/DetailsFooter';
 import HistoryFooter from '../../components/history-footer/HistoryFooter';
+import Aside from '../../components/aside/Aside';
 
 import classes from './MovieDetails.module.scss';
 
@@ -32,7 +33,6 @@ class MovieDetails extends Component {
     await this.getApi(url);
   }
   render() {
-    console.log(this.state.similar);
     return (
       <div className="wrapper-sm">
         <div className="container-sm">
@@ -43,7 +43,9 @@ class MovieDetails extends Component {
               <Cast cast={this.state.credits} />
               <DetailsFooter />
             </div>
-            <div className={classes.right_side}></div>
+            <div className={classes.right_side}>
+              <Aside />
+            </div>
           </div>
         </div>
         <HistoryFooter />

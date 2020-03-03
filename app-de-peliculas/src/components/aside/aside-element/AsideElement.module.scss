@@ -1,0 +1,39 @@
+.wrapper {
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.082);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p:first-child {
+      font-size: 1.8rem;
+      opacity: 0.8;
+      &:hover {
+        text-decoration: underline;
+        color: #136cbf;
+        cursor: pointer;
+      }
+    }
+    img {
+      width: 100%;
+      margin: 1rem 0;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  p:nth-child(2) {
+    margin: 1rem 0;
+    color: #136cbf;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    span {
+      color: black;
+    }
+  }
+}

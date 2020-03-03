@@ -1,0 +1,25 @@
+.container {
+  margin: 2rem;
+  .header {
+    margin: 2rem 0;
+    font-size: 1.8rem;
+  }
+  .title {
+    margin: 1rem;
+    color: #136cbf;
+    &:hover {
+      cursor: pointer;
+    }
+    span {
+      display: block;
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      color: black;
+      opacity: 0.8;
+      &:hover {
+        cursor: initial;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import classes from './Similar.module.scss';
 
 function Similar({ movies }) {
-  console.log(movies.length ? 'yes' : 'no');
   const [movie, setMovie] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const baseUrl = 'https://image.tmdb.org/t/p/';
 
   if (!movies.length) return null;
-  
+
   return (
     <div className={classes.wrapper}>
       <p className={classes.title}>More like this</p>
@@ -28,6 +27,7 @@ function Similar({ movies }) {
               <img
                 key={m.id}
                 src={baseUrl + 'w92' + m.poster_path}
+                alt=""
                 onClick={() => setMovie(m)}
               />
             );
@@ -36,7 +36,7 @@ function Similar({ movies }) {
 
         <div className={classes.show}>
           <div className={classes.big}>
-            <img src={baseUrl + 'w154' + movie.poster_path} />
+            <img src={baseUrl + 'w154' + movie.poster_path} alt="" />
             <button>Add to Watchlist</button>
           </div>
           <div className={classes.text}>
@@ -49,7 +49,7 @@ function Similar({ movies }) {
                 </span>
               </p>
               <div className={classes.starContainer}>
-                <p className={classes.back}>
+                <div className={classes.back}>
                   <Icon icon={faStar} className={classes.star} />
                   <Icon icon={faStar} className={classes.star} />
                   <Icon icon={faStar} className={classes.star} />
@@ -64,7 +64,7 @@ function Similar({ movies }) {
                     className={classes.rating_wrapper}
                     style={{ width: `${movie.vote_average * 10}%` }}
                   >
-                    <p className={classes.front}>
+                    <div className={classes.front}>
                       <Icon icon={faStar} className={classes.star} />
                       <Icon icon={faStar} className={classes.star} />
                       <Icon icon={faStar} className={classes.star} />
@@ -75,9 +75,9 @@ function Similar({ movies }) {
                       <Icon icon={faStar} className={classes.star} />
                       <Icon icon={faStar} className={classes.star} />
                       <Icon icon={faStar} className={classes.star} />
-                    </p>
+                    </div>
                   </div>
-                </p>
+                </div>
               </div>
             </div>
             <p>{movie.overview}</p>
