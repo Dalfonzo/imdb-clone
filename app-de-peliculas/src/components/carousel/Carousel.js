@@ -46,7 +46,7 @@ class Carousel extends React.Component {
   };
 
   componentDidMount() {
-    const intervalId = setInterval(this.adelante, 700000);
+    const intervalId = setInterval(this.adelante, 7000);
     this.getApi(intervalId);
   }
 
