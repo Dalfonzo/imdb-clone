@@ -43,6 +43,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+    @media only screen and (max-width: 1000px) {
+      height: 38rem;
+    }
+    @media only screen and (max-width: 795px) {
+      height: 36rem;
+    }
+    @media only screen and (max-width: 600px) {
+      height: 34rem;
+    }
 
     .container2 {
       width: 100%;
@@ -53,6 +63,21 @@
       display: flex;
       & > * {
         flex: 0 0 calc(100% / 6);
+        @media only screen and (max-width: 1200px) {
+          flex: 0 0 calc(100% / 5);
+        }
+        @media only screen and (max-width: 1000px) {
+          flex: 0 0 calc(100% / 4);
+        }
+        @media only screen and (max-width: 795px) {
+          flex: 0 0 calc(100% / 3);
+        }
+        @media only screen and (max-width: 575px) {
+          flex: 0 0 calc(100% / 2);
+        }
+        @media only screen and (max-width: 350px) {
+          flex: 0 0 calc(100% / 1);
+        }
       }
 
       transform: translateX(-0%);

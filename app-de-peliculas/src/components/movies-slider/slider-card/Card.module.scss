@@ -1,7 +1,9 @@
 .wrapper {
+  height: 100%;
+
   .container {
     margin: auto;
-    height: 40rem;
+    height: 100%;
     border-radius: 5px;
     background-color: rgb(53, 53, 53);
     color: white;
@@ -39,6 +41,19 @@
 
     img {
       margin-bottom: 1rem;
+      @media only screen and (max-width: 1000px) {
+        height: 26rem;
+        width: 19rem;
+      }
+      @media only screen and (max-width: 795px) {
+        height: 24rem;
+        width: 18rem;
+      }
+      @media only screen and (max-width: 600px) {
+        height: 22rem;
+        width: 17rem;
+      }
+
       &:hover {
         cursor: pointer;
         opacity: 0.8;

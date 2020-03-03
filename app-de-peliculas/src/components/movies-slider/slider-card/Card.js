@@ -14,6 +14,11 @@ const card = ({ poster_path, vote_average, title }) => {
           <Icon icon={faBookmark} className={classes.bookmark} />
           <Icon icon={faPlus} className={classes.plus} />
         </div>
+        {/* <div className={classes.img}
+          style={{
+            background: `url(${baseUrl + poster_path}) center/cover no-repeat`
+          }}
+        /> */}
         <img src={baseUrl + poster_path} alt="" />
         <p className={classes.vote}>
           <Icon icon={faStar} className={classes.icon} />
