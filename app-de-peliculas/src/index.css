@@ -26,6 +26,7 @@ span:hover {
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  min-width: 290px;
 }
 
 body {

@@ -1,7 +1,8 @@
 .wrapper {
   color: white;
-  
+
   .container {
+    height: max-content;
     &:hover {
       .image {
         opacity: 0.8;
@@ -14,6 +15,19 @@
       width: 18rem;
       height: 18rem;
       margin: auto;
+      @media only screen and (max-width: 1200px) {
+        height: 17rem;
+        width: 17rem;
+      }
+      @media only screen and (max-width: 1200px) {
+        height: 15rem;
+        width: 15rem;
+      }
+      @media only screen and (max-width: 795px) {
+        height: 14rem;
+        width: 14rem;
+      }
+      
     }
 
     .name {
