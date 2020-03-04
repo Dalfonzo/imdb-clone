@@ -26,6 +26,9 @@ span {
     margin: auto;
     background-color: white;
     display: flex;
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
 
     .links {
       flex: 1;
@@ -43,6 +46,10 @@ span {
         margin: 0.5rem 0;
         font-size: 1.6rem;
         font-weight: 600;
+        @media only screen and (max-width: 900px) {
+          width: 70%;
+          font-size: 1.4rem;
+        }
 
         &:hover {
           cursor: pointer;
@@ -81,11 +88,19 @@ span {
         &:hover {
           cursor: pointer;
         }
+        @media only screen and (max-width: 900px) {
+          font-size: 1.4rem;
+          padding: 0.8rem 1.8rem;
+        }
       }
       .separator {
         font-size: 1.4rem;
         margin: 1rem 0;
         position: relative;
+        @media only screen and (max-width: 900px) {
+          font-size: 1.2rem;
+          padding: 0.8rem 1.8rem;
+        }
         &::after {
           content: '';
           width: 7.5rem;
@@ -114,12 +129,23 @@ span {
         letter-spacing: 0.1rem;
         line-height: 1.8rem;
         text-align: center;
+        @media only screen and (max-width: 900px) {
+          font-size: 0.8rem;
+        }
       }
     }
     .Benefits {
       font-size: 1.5rem;
       position: relative;
       flex: 1;
+      @media only screen and (max-width: 900px) {
+        font-size: 1.2rem;
+      }
+      @media only screen and (max-width: 600px) {
+        margin: auto;
+        border-top: 1px solid rgb(228, 228, 228);
+        padding: .5rem .5rem 4rem 3rem;
+      }
 
       .subtitle {
         font-weight: 600;
