@@ -1,6 +1,9 @@
 .wrapper {
   width: 100%;
   background-color: black;
+  @media only screen and (max-width: 419px) {
+    margin-top: 4rem;
+  }
 
   .title {
     padding: 2rem 0;

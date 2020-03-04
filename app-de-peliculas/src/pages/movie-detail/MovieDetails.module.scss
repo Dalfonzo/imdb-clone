@@ -1,6 +1,13 @@
+// html{
+//   font-size: 50% !important;
+// }
 .container {
   display: flex;
   font-size: 1.2rem;
+  // font-size: inherit;
+  // @media only screen and (max-width: 850px) {
+  //   font-size: 90%;
+  // }
 
   .left_side {
     flex: 70%;
@@ -8,5 +15,8 @@
   }
   .right_side {
     flex: 30%;
+    @media only screen and (max-width: 830px) {
+      display: none;
+    }
   }
 }
