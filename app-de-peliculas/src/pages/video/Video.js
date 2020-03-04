@@ -9,7 +9,7 @@ const Video = props => {
       <VideoPlayer
         id={props.match.params.id}
         back={props.history.goBack}
-      ></VideoPlayer>
+      />
     </div>
   );
 };

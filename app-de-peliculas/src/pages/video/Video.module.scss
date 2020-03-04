@@ -1,5 +1,7 @@
-.container{
+.container {
   width: 130rem;
   margin: auto;
-  
+  @media only screen and (max-width: 1300px) {
+    width: 100%;
+  }
 }
