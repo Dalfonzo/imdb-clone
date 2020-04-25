@@ -1,82 +1,108 @@
 import React from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
+import MovieSlider from 'react-slick';
+import withFetching from '../../hoc/withFetching';
 
 import Card from './slider-card/Card';
 import Controls from '../carousel/carousel-controls/Controls';
 
 import classes from './Slider.module.scss';
 
-class Slider extends React.Component {
-  state = {
-    data: [],
-    position: 0
+const Slider = (props) => {
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    responsive: [
+      {
+        breakpoint: 1240,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 5,
+        },
+      },
+      {
+        breakpoint: 1040,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+      {
+        breakpoint: 820,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 620,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 370,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
-  getMovies = () => {
-    axios(this.props.url).then(({ data }) => {
-      this.setState({
-        data: data.results
-      });
-    });
-  };
-
-  adelante = () => {
-    this.setState(prvState => ({
-      position: prvState.position - 100
-    }));
-  };
-
-  atras = () => {
-    this.setState(prvState => ({
-      position: prvState.position + 100
-    }));
-  };
-
-  componentDidMount() {
-    this.getMovies();
-  }
-
-  render() {
-    const { data, position } = this.state;
-    const translateSlider = { transform: `translateX(${position}%)` };
-    const disableForward =
-      Math.abs(position / 100) === Math.floor(data.length / 6);
-    const disableBack = !position;
-
+  function PrevArrow(props) {
+    const { onClick } = props;
     return (
-      <div className={classes.wrapper}>
-        <h2 className={classes.title}>{this.props.title}</h2>
-        <h3 className={classes.subtitle}>{this.props.subtitle}</h3>
-        <p className={classes.description}>{this.props.description}</p>
-        <div className={classes.container1}>
-          <div className={classes.container2} style={translateSlider}>
-            {data.map(({ id, ...otras }) => {
-              return (
-                <Link
-                  key={id}
-                  to={`title/${id}`}
-                  style={{ textDecoration: 'none' }}
-                >
-                  <Card key={id} {...otras} />
-                </Link>
-              );
-            })}
-          </div>
-          <Controls
-            direction="back"
-            disableButton={disableBack}
-            handler={this.atras}
-          />
-          <Controls
-            direction="forward"
-            disableButton={disableForward}
-            handler={this.adelante}
-          />
-        </div>
-      </div>
+      <Controls
+        direction="back"
+        onClick={onClick}
+        style={{
+          position: 'absolute',
+          zIndex: '100',
+          transform: 'translateY(-40%)',
+          top: '40%',
+          left: '1rem',
+        }}
+      />
     );
   }
-}
 
-export default Slider;
+  function NextArrow(props) {
+    const { onClick } = props;
+    return (
+      <Controls
+        direction="forward"
+        onClick={onClick}
+        style={{
+          position: 'absolute',
+          zIndex: '100',
+          transform: 'translateY(-40%)',
+          top: '40%',
+          right: '1rem',
+        }}
+      />
+    );
+  }
+
+  return (
+    <div className={classes.wrapper}>
+      <h2 className={classes.title}>{props.title}</h2>
+      <h3 className={classes.subtitle}>{props.subtitle}</h3>
+      <p className={classes.description}>{props.description}</p>
+      <MovieSlider {...settings}>
+        {props.data.map(({ id, ...otras }) => (
+          <Link key={id} to={`title/${id}`} style={{ textDecoration: 'none' }}>
+            <Card key={id} {...otras} />
+          </Link>
+        ))}
+      </MovieSlider>
+    </div>
+  );
+};
+
+export default withFetching(Slider);

@@ -9,7 +9,6 @@ import {
 import classes from './Controls.module.scss';
 
 const controls = ({ direction, style, onClick }) => {
-  // const hideButton = disableButton ? { visibility: 'hidden' } : null;
   const i = direction === 'forward' ? faChevronRight : faChevronLeft;
 
   return (

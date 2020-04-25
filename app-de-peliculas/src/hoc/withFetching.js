@@ -17,6 +17,8 @@ const withFetching = (Component) => ({ url, ...otrosProps }) => {
 
   const { data, isLoading } = request;
 
+  console.log(data);
+
   if (isLoading)
     return (
       <Dimmer active>

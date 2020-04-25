@@ -1,5 +1,5 @@
 .wrapper {
-  height: 100%;
+  height: 42rem;
 
   .container {
     margin: auto;
@@ -8,7 +8,7 @@
     background-color: rgb(53, 53, 53);
     color: white;
     position: relative;
-    width: min-content;
+    width: 20rem;
 
     .foo {
       position: absolute;
@@ -41,18 +41,21 @@
 
     img {
       margin-bottom: 1rem;
-      @media only screen and (max-width: 1000px) {
-        height: 26rem;
-        width: 19rem;
-      }
-      @media only screen and (max-width: 795px) {
-        height: 24rem;
-        width: 18rem;
-      }
-      @media only screen and (max-width: 600px) {
-        height: 22rem;
-        width: 17rem;
-      }
+      width: 100%;
+      height: 28rem;
+      object-fit: fill;
+      // @media only screen and (max-width: 1000px) {
+      //   height: 26rem;
+      //   width: 19rem;
+      // }
+      // @media only screen and (max-width: 795px) {
+      //   height: 24rem;
+      //   width: 18rem;
+      // }
+      // @media only screen and (max-width: 600px) {
+      //   height: 22rem;
+      //   width: 17rem;
+      // }
 
       &:hover {
         cursor: pointer;
