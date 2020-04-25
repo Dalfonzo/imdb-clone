@@ -2,23 +2,19 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import ImdbPro from './pages/imdbPro/ImdbPro';
-import Routing from './Routing';
-
-import './App.css';
+import routing from './routing';
 
 class App extends Component {
   state = {
-    data: []
+    data: [],
   };
 
   render() {
     return (
-      <>
-        <Switch>
-          <Route exact path="/imdbpro" component={ImdbPro} />
-          {Routing}
-        </Switch>
-      </>
+      <Switch>
+        <Route exact path="/imdbpro" component={ImdbPro} />
+        {routing}
+      </Switch>
     );
   }
 }
