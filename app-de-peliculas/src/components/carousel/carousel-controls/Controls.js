@@ -3,17 +3,17 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 
 import {
   faChevronRight,
-  faChevronLeft
+  faChevronLeft,
 } from '@fortawesome/free-solid-svg-icons';
 
 import classes from './Controls.module.scss';
 
-const controls = ({ direction, disableButton, handler }) => {
-  const hideButton = disableButton ? { visibility: 'hidden' } : null;
+const controls = ({ direction, style, onClick }) => {
+  // const hideButton = disableButton ? { visibility: 'hidden' } : null;
   const i = direction === 'forward' ? faChevronRight : faChevronLeft;
 
   return (
-    <div className={classes.container} onClick={handler} style={hideButton}>
+    <div className={classes.container} onClick={onClick} style={style}>
       <Icon icon={i} className={classes.icon} />
     </div>
   );

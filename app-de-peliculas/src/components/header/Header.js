@@ -5,7 +5,7 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import SearchBox from './search-box/Search-box';
 import Menu from './menu/Menu';
 import PopUp from './pop-up/pop-up';
-import logo from '../../images/IMDB.png';
+import logo from '../../assets/images/IMDB.png';
 import { faBars, faBookmark } from '@fortawesome/free-solid-svg-icons';
 
 import classes from './Header.module.scss';
@@ -14,28 +14,28 @@ class Header extends React.Component {
   state = {
     data: [],
     displayMenu: false,
-    popUp: false
+    popUp: false,
   };
 
-  getData = data => {
+  getData = (data) => {
     this.setState({
-      data
+      data,
     });
   };
 
   toggleMenu = () => {
     this.setState({
-      displayMenu: !this.state.displayMenu
+      displayMenu: !this.state.displayMenu,
     });
   };
 
   handlePopUp = () => {
     this.setState({
-      popUp: !this.state.popUp
+      popUp: !this.state.popUp,
     });
   };
 
-  showScrolls = visible => {
+  showScrolls = (visible) => {
     let element = document.querySelector('body');
 
     visible

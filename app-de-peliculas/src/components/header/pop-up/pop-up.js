@@ -1,6 +1,6 @@
 import React from 'react';
 
-import girl from '../../../images/girl-bg.png';
+import girl from '../../../assets/images/girl-bg.png';
 
 import classes from './pop-up.module.scss';
 

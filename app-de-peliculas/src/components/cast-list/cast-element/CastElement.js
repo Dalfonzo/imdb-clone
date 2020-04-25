@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import Img from '../../../images/default_user.png';
+import Img from '../../../assets/images/default_user.png';
 
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 

@@ -34,8 +34,9 @@ const home = () => {
 
   return (
     <div className={classes.container}>
+      
       <Carousel url="https://api.themoviedb.org/3/movie/upcoming?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&page=1" />
-      <Slider
+      {/* <Slider
         title="What to Watch"
         subtitle="Fan Favorites"
         description="This week's top TV and movies"
@@ -62,7 +63,7 @@ const home = () => {
         subtitle="Born Today"
         description={`People born on ${today}`}
         url="https://api.themoviedb.org/3/person/popular?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&page=1"
-      />
+      /> */}
     </div>
   );
 };

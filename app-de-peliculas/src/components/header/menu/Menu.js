@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 
-import logo from '../../../images/IMDB.png';
+import logo from '../../../assets/images/IMDB.png';
 import {
   faTimesCircle,
   faFilm,
