@@ -24,14 +24,18 @@ class MovieDetails extends Component {
   };
 
   fetchData = async (url) => {
-    const result = await axios(url);
-    if (result.data) {
-      this.setState({
-        data: result.data,
-        credits: result.data.credits.cast,
-        similar: result.data.similar.results,
-        isLoading: false,
-      });
+    try {
+      const result = await axios(url);
+      if (result.data) {
+        this.setState({
+          data: result.data,
+          credits: result.data.credits.cast,
+          similar: result.data.similar.results,
+          isLoading: false,
+        });
+      }
+    } catch (error) {
+      console.log('something went wrong', error);
     }
   };
 
