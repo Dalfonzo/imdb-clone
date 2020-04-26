@@ -1,73 +1,25 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React from 'react';
 
 import Celebrity from './celebrity-card/Celebrity';
-import Controls from '../carousel/carousel-controls/Controls';
+import withFeching from '../../hoc/withFetching';
+import Slider from 'react-slick';
+import { settings } from '../movies-slider/sliderConfig';
 
 import classes from './Celebrities.module.scss';
 
-export class Celebrities extends Component {
-  state = {
-    data: [],
-    position: 0
-  };
+export const Celebrities = ({ data, ...props }) => {
+  return (
+    <div className={classes.wrapper}>
+      <h3 className={classes.subtitle}>{props.subtitle}</h3>
+      <p className={classes.description}>{props.description}</p>
 
-  getCelebs = () => {
-    axios(this.props.url).then(({ data }) => {
-      this.setState({
-        data: data.results
-      });
-    });
-  };
+      <Slider {...settings}>
+        {data.map(({ id, ...otrasProps }) => (
+          <Celebrity key={id} {...otrasProps} />
+        ))}
+      </Slider>
+    </div>
+  );
+};
 
-  componentDidMount() {
-    this.getCelebs();
-  }
-
-  adelante = () => {
-    this.setState(prvState => ({
-      position: prvState.position - 100
-    }));
-  };
-
-  atras = () => {
-    this.setState(prvState => ({
-      position: prvState.position + 100
-    }));
-  };
-
-  render() {
-    const { data, position } = this.state;
-    const translateSlider = { transform: `translateX(${position}%)` };
-    const disableForward =
-      Math.abs(position / 100) === Math.floor(data.length / 6);
-    const disableBack = !position;
-
-    return (
-      <div className={classes.wrapper}>
-        <h3 className={classes.subtitle}>{this.props.subtitle}</h3>
-        <p className={classes.description}>{this.props.description}</p>
-
-        <div className={classes.container1}>
-          <div className={classes.container2} style={translateSlider}>
-            {data.map(({ id, ...otrasProps }) => (
-              <Celebrity key={id} {...otrasProps} />
-            ))}
-          </div>
-          <Controls
-            direction="back"
-            disableButton={disableBack}
-            handler={this.atras}
-          />
-          <Controls
-            direction="forward"
-            disableButton={disableForward}
-            handler={this.adelante}
-          />
-        </div>
-      </div>
-    );
-  }
-}
-
-export default Celebrities;
+export default withFeching(Celebrities);
