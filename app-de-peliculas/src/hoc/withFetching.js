@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Dimmer, Loader } from 'semantic-ui-react';
+import withLoading from './withLoading';
 import axios from 'axios';
 
 const withFetching = (Component) => ({ url, ...otrosProps }) => {
+  const ComponentWithLoading = withLoading(Component);
   const [request, setRequest] = useState({
     data: [],
     isLoading: false,
@@ -16,13 +17,10 @@ const withFetching = (Component) => ({ url, ...otrosProps }) => {
   }, [url]);
 
   const { data, isLoading } = request;
-  if (isLoading)
-    return (
-      <Dimmer active page>
-        <Loader content="Loading" />
-      </Dimmer>
-    );
-  return <Component data={data} {...otrosProps} />;
+
+  return (
+    <ComponentWithLoading isLoading={isLoading} data={data} {...otrosProps} />
+  );
 };
 
 export default withFetching;

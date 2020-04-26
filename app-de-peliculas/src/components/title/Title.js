@@ -7,11 +7,12 @@ import {
   faBookmark,
   faAngleDoubleDown,
   faStar,
-  faExternalLinkAlt
+  faExternalLinkAlt,
 } from '@fortawesome/free-solid-svg-icons';
+
 import {
   faStar as rStar,
-  faPlayCircle
+  faPlayCircle,
 } from '@fortawesome/free-regular-svg-icons';
 
 import classes from './Title.module.scss';
@@ -31,7 +32,7 @@ const findCrew = (crew, roll) => {
   return arr;
 };
 
-const findStars = cast => {
+const findStars = (cast) => {
   let arr = [];
   for (cast of cast) {
     if (arr.length < 4) {
@@ -46,7 +47,6 @@ const findStars = cast => {
 const Title = ({ data, id }) => {
   useEffect(() => window.scrollTo(0, 0), []);
   const baseUrl = 'https://image.tmdb.org/t/p/';
-
   let {
     title = '',
     original_title = '',
@@ -59,14 +59,14 @@ const Title = ({ data, id }) => {
     overview = '',
     credits = {
       crew: [],
-      cast: []
-    }
+      cast: [],
+    },
   } = data;
 
   let director = findCrew(credits.crew, 'Director').join(' , ');
   let writers = findCrew(credits.crew, 'Screenplay').join(' , ');
   let stars = findStars(credits.cast, 'name', 'name').join(' , ');
-  let gen = genres.map(g => g.name).join(' ,   ');
+  let gen = genres.map((g) => g.name).join(' ,   ');
   let date = release_date.slice(0, 4);
 
   return (
@@ -121,14 +121,14 @@ const Title = ({ data, id }) => {
         <div
           className={classes.poster}
           style={{
-            backgroundImage: `url('${baseUrl + 'w185' + poster_path}')`
+            backgroundImage: `url('${baseUrl + 'w185' + poster_path}')`,
           }}
         />
         <Link
           to={`video/${id}`}
           className={classes.backdrop}
           style={{
-            backgroundImage: `url('${baseUrl + 'w500' + backdrop_path}')`
+            backgroundImage: `url('${baseUrl + 'w500' + backdrop_path}')`,
           }}
         >
           <Icon icon={faPlayCircle} className={classes.play} />
@@ -169,4 +169,4 @@ const Title = ({ data, id }) => {
   );
 };
 
-export default React.memo(Title);
+export default Title;
