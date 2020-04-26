@@ -11,7 +11,7 @@ const withFetching = (Component) => ({ url, ...otrosProps }) => {
   useEffect(() => {
     setRequest({ isLoading: true });
     axios(url).then(({ data }) => {
-      setRequest({ data: data.results, isLoading: false });
+      setRequest({ data: data.articles, isLoading: false });
     });
   }, [url]);
 

@@ -41,11 +41,11 @@ const home = () => {
         description="This week's top TV and movies"
         url="https://api.themoviedb.org/3/movie/popular?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&page=1"
       />
-       {/* <News
+       <News
         title="More to explore"
         subtitle="Top news"
         url="http://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=c89fb28b98ed4170a4004bab8835654b"
-      /> */}
+      />
       <Slider
         title="Explore what’s streaming"
         subtitle="Prime Video"

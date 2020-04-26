@@ -9,9 +9,9 @@ const card = ({ urlToImage, title }) => {
         <div
           className={classes.image}
           style={{
-            background: `url(${urlToImage}) center/cover no-repeat`
+            background: `url(${urlToImage}) center/cover no-repeat`,
           }}
-        ></div>
+        />
         <p className={classes.description}>{title}</p>
       </div>
     </div>
