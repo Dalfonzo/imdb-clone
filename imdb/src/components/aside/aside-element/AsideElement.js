@@ -15,10 +15,9 @@ const AsideElement = ({ data }) => {
       })}
 
       <p>
-        Watch the video <span>>></span>
+        Watch the video <span>&gt;</span>
       </p>
     </div>
   );
 };
-
 export default AsideElement;
