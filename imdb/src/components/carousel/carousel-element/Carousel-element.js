@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { faPlus, faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faPlayCircle } from '@fortawesome/free-regular-svg-icons';
-
+import { MEDIUM_IMG, FULL_IMG } from '../../../constants/apis';
 import classes from './Carousel-element.module.scss';
 
 const carouselElement = ({
@@ -12,9 +12,8 @@ const carouselElement = ({
   overview,
   poster_path,
   backdrop_path,
-  id
+  id,
 }) => {
-  const url = 'https://image.tmdb.org/t/p/';
   return (
     <div className={classes.container}>
       <div className={classes.foo}>
@@ -24,9 +23,7 @@ const carouselElement = ({
       <Link
         className={classes.poster}
         style={{
-          background: `url(${url +
-            'w500' +
-            poster_path}) center/cover no-repeat`
+          background: `url(${MEDIUM_IMG + poster_path}) center/cover no-repeat`,
         }}
         to={`title/${id}`}
       />
@@ -34,9 +31,7 @@ const carouselElement = ({
       <Link
         className={classes.backdrop}
         style={{
-          background: `url(${url +
-            'w1280' +
-            backdrop_path}) center/cover no-repeat`
+          background: `url(${FULL_IMG + backdrop_path}) center/cover no-repeat`,
         }}
         to={`video/${id}`}
       >

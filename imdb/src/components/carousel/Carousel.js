@@ -8,13 +8,6 @@ import withFetching from '../../hoc/withFetching';
 import { settings } from './carouselConfig';
 import classes from './Carousel.module.scss';
 
-// 3e2cc31e8a094dc74d7fa8c446b0c3fa
-// https://image.tmdb.org/t/p/w500
-// https://www.youtube.com/watch?v
-
-// pagina de news key
-// c89fb28b98ed4170a4004bab8835654b
-
 const Carousel = ({ data }) => {
   return (
     <div className={classes.wrapper}>

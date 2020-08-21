@@ -11,7 +11,7 @@ function DetailsFooter() {
       <div className={classes.right}>
         <p>Getting started</p>
         <p>
-          Contributor zone <span>>></span>
+          Contributor zone <span>&gt;</span>
         </p>
       </div>
     </div>

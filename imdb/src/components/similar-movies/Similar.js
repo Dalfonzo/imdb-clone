@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { SMALL_IMG } from '../../constants/apis';
 import classes from './Similar.module.scss';
 
 function Similar({ movies }) {
   const [movie, setMovie] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  const baseUrl = 'https://image.tmdb.org/t/p/';
 
   if (!movies.length) return null;
 
@@ -18,7 +17,7 @@ function Similar({ movies }) {
       <p className={classes.learn}>Learn More</p>
       <div className={classes.container}>
         <div className={classes.preview}>
-          {movies.slice(0, 6).map(m => {
+          {movies.slice(0, 6).map((m) => {
             if (loading) {
               setMovie(movies[0]);
               setLoading(false);
@@ -26,7 +25,7 @@ function Similar({ movies }) {
             return (
               <img
                 key={m.id}
-                src={baseUrl + 'w92' + m.poster_path}
+                src={SMALL_IMG + m.poster_path}
                 alt=""
                 onClick={() => setMovie(m)}
               />
@@ -36,7 +35,7 @@ function Similar({ movies }) {
 
         <div className={classes.show}>
           <div className={classes.big}>
-            <img src={baseUrl + 'w154' + movie.poster_path} alt="" />
+            <img src={SMALL_IMG + movie.poster_path} alt="" />
             <button>Add to Watchlist</button>
           </div>
           <div className={classes.text}>

@@ -9,7 +9,7 @@ import {
   faTv,
   faPlay,
   faStar,
-  faGlobeAmericas
+  faGlobeAmericas,
 } from '@fortawesome/free-solid-svg-icons';
 
 import classes from './Menu.module.scss';

@@ -15,6 +15,7 @@ import {
   faPlayCircle,
 } from '@fortawesome/free-regular-svg-icons';
 
+import { SMALL_IMG, MEDIUM_IMG } from '../../constants/apis';
 import classes from './Title.module.scss';
 
 const findCrew = (crew, roll) => {
@@ -46,7 +47,6 @@ const findStars = (cast) => {
 
 const Title = ({ data, id }) => {
   useEffect(() => window.scrollTo(0, 0), []);
-  const baseUrl = 'https://image.tmdb.org/t/p/';
   let {
     title = '',
     original_title = '',
@@ -78,8 +78,7 @@ const Title = ({ data, id }) => {
           <li>USER REVIEWS</li>
           <li>IMDbPro</li>
           <li>
-            {' '}
-            MORE{' '}
+            MORE
             <Icon icon={faAngleDoubleDown} style={{ position: 'relative' }} />
           </li>
           <li>SHARE</li>
@@ -121,14 +120,14 @@ const Title = ({ data, id }) => {
         <div
           className={classes.poster}
           style={{
-            backgroundImage: `url('${baseUrl + 'w185' + poster_path}')`,
+            backgroundImage: `url('${SMALL_IMG + poster_path}')`,
           }}
         />
         <Link
           to={`video/${id}`}
           className={classes.backdrop}
           style={{
-            backgroundImage: `url('${baseUrl + 'w500' + backdrop_path}')`,
+            backgroundImage: `url('${MEDIUM_IMG + backdrop_path}')`,
           }}
         >
           <Icon icon={faPlayCircle} className={classes.play} />
@@ -155,13 +154,9 @@ const Title = ({ data, id }) => {
         </button>
       </div>
       <div className={classes.imdbPro}>
-        <img
-          src="https://m.media-amazon.com/images/G/01/imdb/IMDbConsumerSiteProTitleViews/images/logo/pro_logo_dark-3176609149._CB468516142_.png"
-          alt=""
-        />
-
+        <img src="/img/imdbpro.png" alt="" />
         <p>
-          View production, box office, & company info{' '}
+          View production, box office, & company info
           <Icon icon={faExternalLinkAlt} className={classes.external} />
         </p>
       </div>
