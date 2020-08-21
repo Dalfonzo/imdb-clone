@@ -2,7 +2,7 @@
   padding-bottom: 3rem;
 
   .icon {
-    font-size: 1.5rem;
+    font-size: var(--normal);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -29,13 +29,13 @@
         }
       }
       .arrow {
-        font-size: 3rem;
+        font-size: var(--xmedium);
         opacity: 0.8;
         margin-right: 0.5rem;
       }
     }
     .share {
-      font-size: 2rem;
+      font-size: var(--xnormal);
     }
   }
 
@@ -76,23 +76,23 @@
         padding-top: 1rem;
         padding-bottom: 2rem;
         font-weight: 600;
-        font-size: 3rem;
+        font-size: var(--xmedium);
       }
       :nth-child(2) {
-        font-size: 1.5rem;
+        font-size: var(--normal);
         line-height: 1.5;
         padding-bottom: 2rem;
         border-bottom: 1px solid rgb(58, 58, 58);
       }
       :nth-child(3) {
-        font-size: 1.5rem;
+        font-size: var(--normal);
         line-height: 1.5;
         padding-top: 1rem;
         padding-bottom: 2rem;
         font-style: italic;
       }
       :nth-child(4) {
-        font-size: 1.2rem;
+        font-size: var(--small);
         line-height: 1.5;
         padding-top: 1rem;
         padding-bottom: 2rem;

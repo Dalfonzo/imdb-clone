@@ -6,12 +6,12 @@
     flex: 1;
 
     p:first-child {
-      font-size: 2.5rem;
+      font-size: var(--medium);
       margin-bottom: 1rem;
     }
 
     button {
-      font-size: 1.5rem;
+      font-size: var(--normal);
       padding: 0.5rem;
       // border-radius: 5px;
       border: 1px solid rgb(236, 173, 2);
@@ -25,7 +25,7 @@
       &:hover{
         cursor: pointer;
       }
-     
+
     }
   }
   .right {
@@ -33,7 +33,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
-    font-size: 1.2rem;
+    font-size: var(--small);
     p {
       padding: 0 0.5rem;
       margin: 0.5rem;

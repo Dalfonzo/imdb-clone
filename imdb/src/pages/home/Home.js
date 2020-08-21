@@ -35,7 +35,7 @@ const Home = () => {
       />
       <Celebrities
         subtitle="Fans Pick"
-        description={`Celebs of the week`}
+        description="Celebs of the week"
         url="https://api.themoviedb.org/3/person/popular?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&page=1"
       />
     </div>

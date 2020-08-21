@@ -28,14 +28,14 @@
     justify-content: center;
     font-weight: 600;
     p {
-      font-size: 1.6rem;
+      font-size: var(--normal);
       margin: 0 0 1rem 0;
     }
 
     ul {
       li {
         list-style-type: initial;
-        font-size: 1.2rem;
+        font-size: var(--small);
         padding: 0.7rem;
         text-decoration: none;
       }

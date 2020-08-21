@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import ImdbPro from './pages/imdbPro/ImdbPro';
-import routing from './routing';
+import routing from './constants/routing';
 
 class App extends Component {
-  state = {
-    data: [],
-  };
-
   render() {
     return (
       <Switch>

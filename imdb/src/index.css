@@ -2,6 +2,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Inicio de variables */
+
+:root {
+  /* Colores */
+  --dark-blue: #136cbf;
+  --light-blue: #49a7ff;
+  --yellow: #deb522;
+  --light-yellow: #f5c929;
+  --dark-yellow: #b6951c;
+  --dark-gray: #a3a3a3;
+  --medium-gray: #c2c2c2;
+  --light-gray: #f2f2f2;
+  --light-black: #424242;
+  /* Tamaño de Fuente */
+  --xsmall: 1rem;
+  --small: 1.2rem;
+  --normal: 1.5rem;
+  --xnormal: 2rem;
+  --medium: 2.5rem;
+  --xmedium: 3rem;
+  --big: 3.5rem;
+  --xbig: 4rem;
+  --large: 5rem;
+  --xlarge: 6rem;
+}
+/* fin de variables */
+
 /*Inicio de Global Resets*/
 
 span {

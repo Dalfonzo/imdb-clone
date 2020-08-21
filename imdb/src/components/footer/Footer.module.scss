@@ -1,5 +1,5 @@
 .container {
-  font-size: 1.5rem;
+  font-size: var(--normal);
   padding: 3rem 0;
   color: white;
   max-width: 130rem;
@@ -11,7 +11,7 @@
 
     .icon {
       padding: 1rem;
-      font-size: 2.5rem;
+      font-size: var(--medium);
       box-sizing: unset;
       border-radius: 50px;
       margin: 0.3rem;
@@ -49,7 +49,7 @@
     }
   }
   .copyright {
-    font-size: 1rem;
+    font-size: var(--xsmall);
     text-align: center;
     color: rgb(160, 160, 160);
   }

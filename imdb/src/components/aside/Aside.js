@@ -1,5 +1,5 @@
 import React from 'react';
-import withFetchingNews from '../../hoc/withFetchingNews';
+import withFetching from '../../hoc/withFetching';
 import AsideElement from './aside-element/AsideElement';
 
 import classes from './Aside.module.scss';
@@ -22,4 +22,4 @@ const Aside = ({ data }) => {
   );
 };
 
-export default withFetchingNews(Aside);
+export default withFetching(Aside);

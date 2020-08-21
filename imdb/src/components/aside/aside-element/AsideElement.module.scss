@@ -1,3 +1,8 @@
+@mixin hover-decoration {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .wrapper {
   width: 100%;
   padding: 1rem;
@@ -9,12 +14,11 @@
     align-items: center;
 
     p:first-child {
-      font-size: 1.8rem;
+      font-size: var(--xnormal);
       opacity: 0.8;
       &:hover {
-        text-decoration: underline;
-        color: #136cbf;
-        cursor: pointer;
+        @include hover-decoration;
+        color: var(--dark-blue);
       }
     }
     img {
@@ -27,10 +31,9 @@
   }
   p:nth-child(2) {
     margin: 1rem 0;
-    color: #136cbf;
+    color: var(--dark-blue);
     &:hover {
-      text-decoration: underline;
-      cursor: pointer;
+      @include hover-decoration;
     }
     span {
       color: black;

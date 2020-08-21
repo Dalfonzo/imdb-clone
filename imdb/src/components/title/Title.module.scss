@@ -3,7 +3,7 @@
   background-color: #424242;
   padding: 1rem 2rem;
   @media only screen and (max-width: 900px) {
-    font-size: 1rem;
+    font-size: var(--xsmall);
   }
   @media only screen and (max-width: 500px) {
     display: none;
@@ -55,29 +55,29 @@
     .bookmark {
       align-self: center;
       margin: auto;
-      font-size: 5rem;
+      font-size: var(--large);
       color: rgb(168, 168, 168);
       @media only screen and (max-width: 900px) {
-        font-size: 3.5rem;
+        font-size: var(--big);
       }
       @media only screen and (max-width: 400px) {
-        font-size: 2.5rem;
+        font-size: var(--medium);
       }
     }
 
     .plus {
       color: white;
       position: absolute;
-      font-size: 2rem;
+      font-size: var(--xnormal);
       font-weight: 400;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       @media only screen and (max-width: 900px) {
-        font-size: 1.5rem;
+        font-size: var(--normal);
       }
       @media only screen and (max-width: 400px) {
-        font-size: 1rem;
+        font-size: var(--xsmall);
       }
     }
   }
@@ -91,21 +91,21 @@
     }
 
     p:first-child {
-      font-size: 3.5rem;
+      font-size: var(--big);
       @media only screen and (max-width: 900px) {
-        font-size: 2.5rem;
+        font-size: var(--medium);
       }
       @media only screen and (max-width: 400px) {
-        font-size: 1.5rem;
+        font-size: var(--normal);
       }
       & > span {
         margin-left: 0.5rem;
-        font-size: 2.5rem;
+        font-size: var(--medium);
         @media only screen and (max-width: 900px) {
-          font-size: 2rem;
+          font-size: var(--xnormal);
         }
         @media only screen and (max-width: 400px) {
-          font-size: 1rem;
+          font-size: var(--xsmall);
         }
         opacity: 0.8;
         color: white;
@@ -117,7 +117,7 @@
     }
     p:nth-child(2) {
       @media only screen and (max-width: 400px) {
-        font-size: 1rem;
+        font-size: var(--xsmall);
       }
       & > span {
         color: white;
@@ -127,7 +127,7 @@
     }
     ul {
       @media only screen and (max-width: 900px) {
-        font-size: 1rem;
+        font-size: var(--xsmall);
       }
       @media only screen and (max-width: 400px) {
         font-size: 0.6rem;
@@ -150,20 +150,20 @@
 
     p:first-child {
       flex: 1;
-      font-size: 2.5rem;
+      font-size: var(--medium);
       font-weight: 400;
       padding-right: 0.5rem;
       border-right: 1px solid rgb(117, 117, 117);
       display: flex;
       @media only screen and (max-width: 600px) {
-        font-size: 2rem;
+        font-size: var(--xnormal);
       }
       @media only screen and (max-width: 400px) {
-        font-size: 1.5rem;
+        font-size: var(--normal);
       }
 
       span {
-        font-size: 1rem;
+        font-size: var(--xsmall);
         color: white;
         opacity: 0.5;
         margin-left: 0.2rem;
@@ -174,12 +174,12 @@
       .star {
         margin-right: 1rem;
         color: #e4bb24;
-        font-size: 2.5rem;
+        font-size: var(--medium);
         @media only screen and (max-width: 600px) {
-          font-size: 2rem;
+          font-size: var(--xnormal);
         }
         @media only screen and (max-width: 400px) {
-          font-size: 1.5rem;
+          font-size: var(--normal);
         }
       }
     }
@@ -193,14 +193,14 @@
         display: none;
       }
       .rstar {
-        font-size: 2.5rem;
+        font-size: var(--medium);
         opacity: 0.8;
         margin-right: 0.2rem;
         @media only screen and (max-width: 600px) {
-          font-size: 2rem;
+          font-size: var(--xnormal);
         }
         @media only screen and (max-width: 400px) {
-          font-size: 1.5rem;
+          font-size: var(--normal);
         }
       }
       &:hover {
@@ -215,7 +215,7 @@
   display: flex;
   flex-direction: column;
   background-color: #eee;
-  font-size: 1.3rem;
+  font-size: var(--small);
   padding: 2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.082);
 
@@ -250,15 +250,15 @@
     border: none;
     color: white;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: var(--small);
     background-color: #0d5baf;
     padding: 1.5rem 0;
     margin: 1rem 0;
-     @media only screen and (max-width: 600px) {
-        width: 50%;
-        font-size: 1rem;
-        padding: 1rem 0;
-      }
+    @media only screen and (max-width: 600px) {
+      width: 50%;
+      font-size: var(--xsmall);
+      padding: 1rem 0;
+    }
     &:hover {
       opacity: 0.9;
     }
@@ -331,7 +331,7 @@
       color: white;
       bottom: 5%;
       left: 5%;
-      font-size: 4rem;
+      font-size: var(--xbig);
       border-radius: 100px;
     }
     p {

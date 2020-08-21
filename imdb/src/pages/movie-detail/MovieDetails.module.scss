@@ -1,13 +1,6 @@
-// html{
-//   font-size: 50% !important;
-// }
 .container {
   display: flex;
-  font-size: 1.2rem;
-  // font-size: inherit;
-  // @media only screen and (max-width: 850px) {
-  //   font-size: 90%;
-  // }
+  font-size: var(--small);
 
   .left_side {
     flex: 70%;

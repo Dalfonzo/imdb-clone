@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 
 import Card from './news-card/newsCard';
 import { settings } from './newsConfig';
-import withFetchingNews from '../../hoc/withFetchingNews';
+import withFetching from '../../hoc/withFetching';
 
 import classes from './News.module.scss';
 
@@ -22,4 +22,5 @@ const News = ({ data, ...props }) => {
     </div>
   );
 };
-export default withFetchingNews(News);
+
+export default withFetching(News);

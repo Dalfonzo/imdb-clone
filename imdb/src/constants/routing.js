@@ -1,34 +1,34 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import Home from './pages/home/Home';
-import SignIn from './pages/sign-in/SignIn';
-import WithLayout from './hoc/WithLayout';
-import Video from './pages/video/Video';
-import MovieDetails from './pages/movie-detail/MovieDetails';
+import Home from '../pages/home/Home';
+import SignIn from '../pages/sign-in/SignIn';
+import WithLayout from '../hoc/WithLayout';
+import Video from '../pages/video/Video';
+import MovieDetails from '../pages/movie-detail/MovieDetails';
 
 const routing = (function routing() {
   const routes = [
     {
       path: '/',
-      component: Home
+      component: Home,
     },
     {
       path: '/signin',
-      component: SignIn
+      component: SignIn,
     },
     {
       path: '/video/:id',
-      component: Video
+      component: Video,
     },
     {
       path: '/title/:id',
-      component: MovieDetails
+      component: MovieDetails,
     },
     {
       path: '/title/video/:id',
-      component: Video
-    }
+      component: Video,
+    },
   ];
 
   const routeComponents = routes.map(({ path, component }, key) => (

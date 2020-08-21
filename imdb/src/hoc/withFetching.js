@@ -13,14 +13,12 @@ const withFetching = (Component) => ({ url, ...otrosProps }) => {
     setRequest({ isLoading: true });
     axios(url)
       .then(({ data }) => {
-        setRequest({ data: data.results, isLoading: false });
+        setRequest({ data: data.results || data.articles, isLoading: false });
       })
       .catch(function (error) {
         if (error.request) {
-          // The request was made but no response was received
           console.log(error.request);
         } else {
-          // Something happened in setting up the request that triggered an Error
           console.log('Error', error.message);
         }
       });

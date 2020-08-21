@@ -1,7 +1,7 @@
 .title {
   margin-top: 3rem;
   margin-bottom: 1rem;
-  font-size: 2.3rem;
+  font-size: var(--medium);
   font-weight: 600;
 }
 
@@ -44,11 +44,11 @@ span {
         border-radius: 5px;
         width: 50%;
         margin: 0.5rem 0;
-        font-size: 1.6rem;
+        font-size: var(--normal);
         font-weight: 600;
         @media only screen and (max-width: 900px) {
           width: 70%;
-          font-size: 1.4rem;
+          font-size: var(--normal);
         }
 
         &:hover {
@@ -78,7 +78,7 @@ span {
       }
       button {
         margin: 1rem;
-        font-size: 1.7rem;
+        font-size: var(--normal);
         font-weight: 600;
         letter-spacing: 0.1rem;
         padding: 0.8rem 2.5rem;
@@ -89,16 +89,16 @@ span {
           cursor: pointer;
         }
         @media only screen and (max-width: 900px) {
-          font-size: 1.4rem;
+          font-size: var(--normal);
           padding: 0.8rem 1.8rem;
         }
       }
       .separator {
-        font-size: 1.4rem;
+        font-size: var(--normal);
         margin: 1rem 0;
         position: relative;
         @media only screen and (max-width: 900px) {
-          font-size: 1.2rem;
+          font-size: var(--small);
           padding: 0.8rem 1.8rem;
         }
         &::after {
@@ -124,7 +124,7 @@ span {
       }
       .disclaimer {
         margin: 1.5rem 0 3rem 0;
-        font-size: 1rem;
+        font-size: var(--xsmall);
         width: 50%;
         letter-spacing: 0.1rem;
         line-height: 1.8rem;
@@ -135,16 +135,16 @@ span {
       }
     }
     .Benefits {
-      font-size: 1.5rem;
+      font-size: var(--normal);
       position: relative;
       flex: 1;
       @media only screen and (max-width: 900px) {
-        font-size: 1.2rem;
+        font-size: var(--small);
       }
       @media only screen and (max-width: 600px) {
         margin: auto;
         border-top: 1px solid rgb(228, 228, 228);
-        padding: .5rem .5rem 4rem 3rem;
+        padding: 0.5rem 0.5rem 4rem 3rem;
       }
 
       .subtitle {
@@ -180,7 +180,7 @@ span {
     padding-bottom: 8rem;
 
     .title {
-      font-size: 1.6rem;
+      font-size: var(--normal);
       font-weight: 400;
       margin-left: 2rem;
     }

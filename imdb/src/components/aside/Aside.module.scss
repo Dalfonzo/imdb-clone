@@ -2,7 +2,7 @@
   margin: 2rem;
   .header {
     margin: 2rem 0;
-    font-size: 1.8rem;
+    font-size: var(--xnormal);
   }
   .title {
     margin: 1rem;
@@ -13,7 +13,7 @@
     span {
       display: block;
       margin: 0.5rem 0;
-      font-size: 1.2rem;
+      font-size: var(--small);
       color: black;
       opacity: 0.8;
       &:hover {
