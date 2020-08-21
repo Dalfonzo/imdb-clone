@@ -8,6 +8,7 @@ import DetailsFooter from '../../components/details-footer/DetailsFooter';
 import HistoryFooter from '../../components/history-footer/HistoryFooter';
 import Aside from '../../components/aside/Aside';
 import withLoading from '../../hoc/withLoading';
+import { HEADLINES, API_BASE_URL, KEY } from '../../constants/apis';
 
 import classes from './MovieDetails.module.scss';
 
@@ -23,7 +24,15 @@ class MovieDetails extends Component {
     isLoading: false,
   };
 
-  fetchData = async (url) => {
+  fetchData = async () => {
+    const movieID = this.props.match.params.id;
+    const url =
+      API_BASE_URL +
+      'movie/' +
+      movieID +
+      KEY +
+      '&language=en-US&append_to_response=credits,images,keywords,reviews,similar';
+
     try {
       const result = await axios(url);
       if (result.data) {
@@ -39,11 +48,11 @@ class MovieDetails extends Component {
     }
   };
 
-  async componentDidMount() {
+  componentDidMount() {
     this.setState({ isLoading: true });
-    const FETCH_URL = `https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=3e2cc31e8a094dc74d7fa8c446b0c3fa&language=en-US&append_to_response=credits,images,keywords,reviews,similar`;
-    await this.fetchData(FETCH_URL);
+    this.fetchData();
   }
+
   render() {
     return (
       <div className="wrapper-sm">
@@ -60,7 +69,7 @@ class MovieDetails extends Component {
               <DetailsFooter />
             </div>
             <div className={classes.right_side}>
-              <Aside url="http://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=c89fb28b98ed4170a4004bab8835654b" />
+              <Aside url={HEADLINES} />
             </div>
           </div>
         </div>
