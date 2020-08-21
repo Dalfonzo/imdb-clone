@@ -45,11 +45,11 @@
       margin: 2rem 0 3rem 0;
       align-self: flex-start;
       padding: 0.7rem 2.5rem;
-      background-color: #f5c929;
+      background-color: var(--light-yellow);
       border: none;
       border-radius: 3px;
       &:hover {
-        background-color: #deb522;
+        background-color: var(--yellow);
       }
     }
   }

@@ -25,7 +25,7 @@
 }
 
 .icon {
-  color: #deb522;
+  color: var(--yellow);
 }
 
 .wrapper {
@@ -91,7 +91,7 @@
       }
 
       &:hover {
-        color: #b6951c;
+        color: var(--yellow);
         cursor: pointer;
       }
     }

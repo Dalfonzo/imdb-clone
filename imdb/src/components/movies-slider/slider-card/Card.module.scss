@@ -74,7 +74,7 @@
       text-align: center;
       position: absolute;
       bottom: 0.8rem;
-      color: rgb(73, 167, 255);
+      color: var(--light-blue);
       padding: 0.8rem;
       border-radius: 5px;
       background-color: rgb(65, 65, 65);
@@ -92,7 +92,7 @@
 
       .icon {
         margin-right: 1rem;
-        color: rgb(245, 197, 24);
+        color: var(--light-yellow);
       }
     }
 
@@ -100,7 +100,7 @@
       font-size: var(--normal);
       color: white;
       &:hover {
-        color: rgb(245, 197, 24);
+        color: var(--light-yellow);
         cursor: pointer;
       }
     }

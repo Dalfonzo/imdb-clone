@@ -19,7 +19,7 @@
 
   p:not(:nth-child(3)) {
     flex: 3;
-    color: #136cbf;
+    color: var(--dark-blue);
 
     &:hover {
       cursor: pointer;

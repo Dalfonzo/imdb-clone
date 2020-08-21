@@ -1,6 +1,6 @@
 .nav {
   color: white;
-  background-color: #424242;
+  background-color: var(--light-black);
   padding: 1rem 2rem;
   @media only screen and (max-width: 900px) {
     font-size: var(--xsmall);
@@ -35,7 +35,7 @@
 }
 
 .hero_top {
-  background-color: #424242;
+  background-color: var(--light-black);
   display: flex;
   color: white;
   padding-bottom: 1rem;
@@ -173,7 +173,7 @@
 
       .star {
         margin-right: 1rem;
-        color: #e4bb24;
+        color: var(--light-yellow);
         font-size: var(--medium);
         @media only screen and (max-width: 600px) {
           font-size: var(--xnormal);
@@ -214,14 +214,14 @@
 .overview {
   display: flex;
   flex-direction: column;
-  background-color: #eee;
+  background-color: var(--light-gray);
   font-size: var(--small);
   padding: 2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.082);
 
   p {
     margin: 0.3rem 0;
-    color: #136cbf;
+    color: var(--dark-blue);
   }
   & > *:not(:first-child) {
     &:hover {
@@ -251,7 +251,7 @@
     color: white;
     font-weight: 600;
     font-size: var(--small);
-    background-color: #0d5baf;
+    background-color: var(--dark-blue);
     padding: 1.5rem 0;
     margin: 1rem 0;
     @media only screen and (max-width: 600px) {
@@ -269,7 +269,7 @@
   display: flex;
   align-items: center;
   padding: 1.5rem;
-  background-color: #eee;
+  background-color: var(--light-gray);
   border-bottom: 1px solid rgba(0, 0, 0, 0.082);
 
   &:hover {
@@ -281,7 +281,7 @@
   }
 
   p {
-    color: #136cbf;
+    color: var(--dark-blue);
 
     &:hover {
       text-decoration: underline;
@@ -291,7 +291,7 @@
 
 .hero {
   display: flex;
-  background-color: #424242;
+  background-color: var(--light-black);
   height: 25rem;
   @media only screen and (max-width: 600px) {
     height: 20;

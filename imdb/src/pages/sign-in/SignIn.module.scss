@@ -6,7 +6,7 @@
 }
 
 span {
-  color: #136cb2;
+  color: var(--dark-blue);
   &:hover {
     text-decoration: underline;
     cursor: pointer;
@@ -83,7 +83,7 @@ span {
         letter-spacing: 0.1rem;
         padding: 0.8rem 2.5rem;
         border-radius: 5px;
-        background-color: #e4b721;
+        background-color: var(--light-yellow);
         border: none;
         &:hover {
           cursor: pointer;
@@ -176,7 +176,7 @@ span {
     justify-content: space-between;
     margin: auto;
     max-width: 100rem;
-    background-color: #ededec;
+    background-color: var(--light-gray);
     padding-bottom: 8rem;
 
     .title {
@@ -193,7 +193,7 @@ span {
       color: rgb(88, 88, 88);
 
       &:nth-child(2) {
-        color: #136cb2;
+        color: var(--dark-blue);
         margin-right: 2rem;
 
         &:hover {

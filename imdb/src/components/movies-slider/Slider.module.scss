@@ -7,7 +7,7 @@
     padding: 2rem 0;
     font-size: var(--big);
     font-weight: 600;
-    color: rgb(245, 197, 24);
+    color: var(--light-yellow);
     margin-left: 1rem;
   }
 
@@ -24,13 +24,13 @@
       top: 0;
       left: 0;
       height: 100%;
-      border: 2px solid rgb(245, 197, 24);
+      border: 2px solid var(--light-yellow);
       border-radius: 5px;
     }
   }
   .description {
     padding-top: 0.5rem;
-    color: #a3a3a3;
+    color: var(--dark-gray);
     font-size: var(--xnormal);
     margin-left: 1rem;
   }

@@ -1,6 +1,6 @@
 .container {
   padding: 1rem 2rem;
-  background-color: #f8f8f8;
+  background-color: var(--light-gray);
   border-bottom: 1px solid rgba(0, 0, 0, 0.082);
 
   .top {
@@ -13,7 +13,7 @@
     }
 
     p:nth-child(2) {
-      color: #136cbf;
+      color: var(--dark-blue);
       &:hover {
         cursor: pointer;
         text-decoration: underline;

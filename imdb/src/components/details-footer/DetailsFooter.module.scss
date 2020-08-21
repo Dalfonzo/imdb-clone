@@ -22,10 +22,9 @@
         rgba(240, 231, 107, 0.88) 0%,
         rgba(245, 215, 43, 1) 100%
       );
-      &:hover{
+      &:hover {
         cursor: pointer;
       }
-
     }
   }
   .right {
@@ -38,7 +37,7 @@
       padding: 0 0.5rem;
       margin: 0.5rem;
       border-left: 1px solid rgba(0, 0, 0, 0.144);
-      color: #136cbf;
+      color: var(--dark-blue);
       &:hover {
         cursor: pointer;
         text-decoration: underline;

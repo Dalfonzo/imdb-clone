@@ -16,7 +16,7 @@
     right: 1rem;
     top: 1rem;
     margin: 0 0.5rem;
-    color: #136cbf;
+    color: var(--dark-blue);
     &:hover {
       cursor: pointer;
       text-decoration: underline;
@@ -102,7 +102,7 @@
           opacity: 0.7;
         }
         p:first-child {
-          color: #136cbf;
+          color: var(--dark-blue);
           font-size: var(--normal);
           font-weight: 600;
           @media only screen and (max-width: 600px) {
@@ -137,7 +137,7 @@
 
             .back {
               font-size: var(--small);
-              color: rgb(175, 175, 175);
+              color: var(--dark-gray);
               position: relative;
               width: max-content;
             }
@@ -151,7 +151,7 @@
               .front {
                 font-size: var(--small);
                 width: max-content;
-                color: rgb(255, 211, 65);
+                color: var(--light-yellow);
                 flex-wrap: nowrap;
               }
             }
