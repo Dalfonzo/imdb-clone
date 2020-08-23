@@ -13,7 +13,14 @@ import {
 
 import classes from './Home.module.scss';
 
+const HOME_TITLE =
+  'IMDb: Ratings, Reviews, and Where to Watch the Best Movies & TV Shows';
+
 const Home = () => {
+  React.useEffect(() => {
+    document.title = HOME_TITLE;
+  }, []);
+
   return (
     <div className={classes.container}>
       <Carousel url={UPCOMING_MOVIES} />

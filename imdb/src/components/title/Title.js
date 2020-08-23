@@ -46,7 +46,6 @@ const findStars = (cast) => {
 };
 
 const Title = ({ data, id }) => {
-  useEffect(() => window.scrollTo(0, 0), []);
   let {
     title = '',
     original_title = '',
@@ -62,6 +61,12 @@ const Title = ({ data, id }) => {
       cast: [],
     },
   } = data;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = ` ${title} (${release_date.slice(0, 4)}) - IMDB`;
+    // eslint-disable-next-line
+  }, []);
 
   let director = findCrew(credits.crew, 'Director').join(' , ');
   let writers = findCrew(credits.crew, 'Screenplay').join(' , ');
