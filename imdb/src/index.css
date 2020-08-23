@@ -1,7 +1,28 @@
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'SourceCodePro';
+  src: url(./assets/fonts/SourceCodePro-Bold.ttf);
+  font-weight: bold;
 }
+@font-face {
+  font-family: 'SourceCodePro';
+  src: url(./assets/fonts/SourceCodePro-Light.ttf);
+  font-weight: Light;
+}
+@font-face {
+  font-family: 'SourceCodePro';
+  src: url(./assets/fonts/SourceCodePro-Medium.ttf);
+  font-weight: medium;
+}
+@font-face {
+  font-family: 'SourceCodePro';
+  src: url(./assets/fonts/SourceCodePro-Regular.ttf);
+  font-weight: regular;
+}
+
+/* code {
+  font-family: SourceCodePro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+} */
+
 /* Inicio de variables */
 
 :root {
@@ -42,6 +63,7 @@ span:hover {
 * {
   margin: 0;
   padding: 0;
+  font-family: 'SourceCodePro';
 }
 
 *,
