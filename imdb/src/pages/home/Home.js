@@ -1,14 +1,14 @@
 import React from 'react';
 import Carousel from '../../components/carousel/Carousel';
 import Slider from '../../components/movies-slider/Slider';
-// import News from '../../components/news-slider/News';
+import News from '../../components/news-slider/News';
 import Celebrities from '../../components/celebrities-slider/Celebrities';
 import {
   UPCOMING_MOVIES,
   POPULAR_MOVIES,
   PLAYING_MOVIES,
   CELEBRITIES,
-  // HEADLINES,
+  HEADLINES,
 } from '../../constants/apis';
 
 import classes from './Home.module.scss';
@@ -30,7 +30,7 @@ const Home = () => {
         description="This week's top TV and movies"
         url={POPULAR_MOVIES + '1'}
       />
-      {/* <News title="More to explore" subtitle="Top news" url={HEADLINES} /> */}
+      <News title="More to explore" subtitle="Top news" url={HEADLINES} />
       <Slider
         title="Explore what’s streaming"
         subtitle="Prime Video"
