@@ -2,14 +2,14 @@ import React from 'react';
 
 import classes from './newsCard.module.scss';
 
-const card = ({ urlToImage, title }) => {
+const card = ({ image, title }) => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
         <div
           className={classes.image}
           style={{
-            background: `url(${urlToImage}) center/cover no-repeat`,
+            background: `url(${image}) center/cover no-repeat`,
           }}
         />
         <p className={classes.description}>{title}</p>

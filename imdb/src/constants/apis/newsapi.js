@@ -1,5 +1,5 @@
-const API_KEY = 'apiKey=c89fb28b98ed4170a4004bab8835654b';
-const BASE_URL = 'https://newsapi.org/v2/';
-const CONFIG = 'top-headlines?country=us&category=entertainment&';
+const API_KEY = 'token=24a58a0816ceb03e51876f6f0ffb6423';
+const BASE_URL = 'https://gnews.io/api/v4/';
+const CONFIG = 'top-headlines?country=us&topic=entertainment&';
 
 export const HEADLINES = BASE_URL + CONFIG + API_KEY;
