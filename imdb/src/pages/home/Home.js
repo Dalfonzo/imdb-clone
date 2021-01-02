@@ -30,7 +30,7 @@ const Home = () => {
         description="This week's top TV and movies"
         url={POPULAR_MOVIES + '1'}
       />
-      <News title="More to explore" subtitle="Top news" url={HEADLINES} />
+      {/* <News title="More to explore" subtitle="Top news" url={HEADLINES} /> */}
       <Slider
         title="Explore what’s streaming"
         subtitle="Prime Video"
